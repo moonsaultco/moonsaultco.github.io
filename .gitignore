@@ -1,1 +1,3 @@
 _site/
+.vagrant
+node_modules
