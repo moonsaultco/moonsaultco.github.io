@@ -10,7 +10,8 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "./vagrant-provision.sh"
   config.vm.network "forwarded_port", guest: 4000, host: 4000
   config.vm.provider "virtualbox" do |v|
-    v.memory = 2048
+    v.name = "moonsault.co"
+    v.memory = 4096
     v.cpus = 2
   end
 end
