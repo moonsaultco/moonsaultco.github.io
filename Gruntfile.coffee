@@ -2,16 +2,21 @@
 
 module.exports = (grunt)->
 
-  grunt.loadNpmTasks 'grunt-contrib-less'
-	# grunt.loadNpmTasks 'grunt-browserify'
-  #
+  require('jit-grunt')(grunt)
+
   config =
     less:
       development:
         options:
           paths: ["./less"]
         files:
-          "./css/foo.css": "./less/agency.less"
+          "./css/agency.css": "./less/agency.less"
+    watch:
+      styles:
+        files: ['less/**/*.less']
+        tasks: ['less']
+        options:
+          nospawn: true
 
   grunt.initConfig(config)
-  grunt.registerTask('default', ['less:development']);
+  grunt.registerTask('default', ['less', 'watch']);
