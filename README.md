@@ -1,3 +1,31 @@
+# Get Started
+
+### Prerequisites
+
+* [Vagrant](https://www.vagrantup.com)
+* [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+
+### Instructions 
+
+```bash
+git clone git@github.com:moonsaultco/moonsaultco.github.io.git
+cd moonsaultco.github.io.git
+vagrant up # some coffee, it's going to be a while
+vagrant ssh
+	
+# now you are in a linux machine
+cd /vagrant
+bundle install
+bundle exec jekyll serve # not you are running the app on port 4000
+	
+# open a new terminal window
+vagrant ssh
+cd /vagrant
+grunt # now you are watching less files and compiling javascript
+```
+
+Stock theme doc below here
+
 # [Start Bootstrap](http://startbootstrap.com/) - [Agency](http://startbootstrap.com/template-overviews/agency/)
 
 [Agency](http://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
