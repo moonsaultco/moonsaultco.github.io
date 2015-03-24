@@ -5,19 +5,19 @@
 * [Vagrant](https://www.vagrantup.com)
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
-### Instructions 
+### Instructions
 
 ```bash
 git clone git@github.com:moonsaultco/moonsaultco.github.io.git
 cd moonsaultco.github.io.git
 vagrant up # some coffee, it's going to be a while
 vagrant ssh
-	
+
 # now you are in a linux machine
 cd /vagrant
 bundle install
-bundle exec jekyll serve # not you are running the app on port 4000
-	
+bundle exec jekyll serve --watch --force_polling # not you are running the app on port 4000
+
 # open a new terminal window
 vagrant ssh
 cd /vagrant

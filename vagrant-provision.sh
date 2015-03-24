@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install -y curl wget build-essential software-properties-common
+apt-get install -y grep curl wget build-essential software-properties-common
 
 # run as the vagrant user to get these installs to work correctly
 su vagrant <<'EOF'
@@ -18,7 +18,7 @@ nvm install 0.10
 nvm alias default 0.10
 
 # app specifc
-gem install bundler jekyll
+gem install bundler jekyll --no-ri --no-rdoc
 npm install -g grunt-cli nodemon coffee-script
 EOF
 
