@@ -6,7 +6,7 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
-  config.vm.box = "hashicorp/precise32"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.provision "shell", path: "./vagrant-provision.sh"
   config.vm.network "forwarded_port", guest: 4000, host: 4000
   config.vm.provider "virtualbox" do |v|

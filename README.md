@@ -4,6 +4,8 @@
 
 * [Vagrant](https://www.vagrantup.com)
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+* [Virtualbox Guest Plugin](http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/)
+
 
 ### Instructions
 
@@ -15,8 +17,7 @@ vagrant ssh
 
 # now you are in a linux machine
 cd /vagrant
-bundle install
-bundle exec jekyll serve --watch --force_polling # not you are running the app on port 4000
+python -m SimpleHTTPServer 4000
 
 # open a new terminal window
 vagrant ssh
