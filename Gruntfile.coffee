@@ -10,7 +10,7 @@ module.exports = (grunt)->
         options:
           paths: ["./less"]
         files:
-          "./css/agency.css": "./less/agency.less"
+          "./css/grayscale.css": "./less/grayscale.less"
     watch:
       styles:
         files: ['less/**/*.less']
