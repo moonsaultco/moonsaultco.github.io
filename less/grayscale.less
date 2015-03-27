@@ -157,7 +157,9 @@ a {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/buzz_aldren_crop.jpg) no-repeat bottom center scroll;
+    //background: url(../img/duke_crater.jpg) no-repeat bottom center scroll;
+    //background: url(../img/alan_bean.jpg) no-repeat bottom center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -313,6 +315,22 @@ a {
   //border: 7px solid black;
 }
 
+//mobile
+@media only screen and (max-width: 766px){
+    .team-member img {
+        max-width: 200px;
+        width: 70%;
+    }
+}
+
+//non mobile
+@media only screen and (min-width: 767px){
+    .team-member img {
+        max-width: 230px;
+        width: 50%;
+    }
+}
+
 
 @media(min-width:767px) {
     .content-section {
@@ -328,6 +346,8 @@ a {
         margin-top: 250px;
     }
 }
+
+
 
 .btn {
     .heading-font();
