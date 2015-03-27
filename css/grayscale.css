@@ -153,7 +153,7 @@ a:focus {
   width: 274px;
   height: 80px;
   background-size: 274px;
-  margin: 0 auto;
+  margin: 0 auto 1.5em;
 }
 @media (min-width: 768px) {
   .intro {
@@ -167,11 +167,9 @@ a:focus {
     font-size: 26px;
   }
   .intro .icon-logo {
-    display: block;
     width: 384px;
     height: 112px;
     background-size: 384px;
-    margin: 0 auto;
   }
 }
 .btn-circle {
