@@ -15,6 +15,12 @@
     font-family: "Merriweather", Georgia, serif;
 }
 
+.box-sizing {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -82,19 +88,19 @@ a {
     //border-bottom: 1px solid fade(white, 30%);
     .heading-font();
     background-color: @navbar;
+    .navbar-toggle {
+        padding: 4px 6px;
+        font-size: 16px;
+        color: white;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
     .navbar-brand {
         //font-weight: 700;
         &:focus {
             outline: none;
-        }
-        .navbar-toggle {
-            padding: 4px 6px;
-            font-size: 16px;
-            color: white;
-            &:focus,
-            &:active {
-                outline: none;
-            }
         }
     }
     a {
@@ -195,6 +201,25 @@ a {
     }
 }
 
+.single-column {
+    .box-sizing;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.about, .contact {
+    .single-column;
+}
+
+.section-wrap {
+    //.box-sizing;
+    padding: 75px 15px 50px;
+}
+
+.white {
+    background: white;
+}
+
 .btn-circle {
     width: 70px;
     height: 70px;
@@ -276,6 +301,10 @@ a {
     width: 100%;
     height: 200px;
     margin-top: 100px;
+}
+
+.team-member {
+    padding-bottom: 2em;
 }
 
 .team-member img {
