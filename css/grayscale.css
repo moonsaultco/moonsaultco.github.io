@@ -8,9 +8,10 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Lora", Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   color: #333;
-  background-color: #eee;
+  background-color: #f3f3f3;
+  font-weight: 300;
 }
 html {
   width: 100%;
@@ -22,13 +23,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 h3.section-subheading {
-  font-family: "Lora", Georgia, serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   text-transform: none;
   font-weight: 400;
   margin: -0.25em 0 1em;
@@ -61,13 +63,10 @@ a:focus {
 }
 .navbar-custom {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
-  background-color: black;
-}
-.navbar-custom .navbar-brand {
-  font-weight: 700;
+  background-color: #333333;
 }
 .navbar-custom .navbar-brand:focus {
   outline: none;
@@ -120,8 +119,7 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: #333333;
   }
 }
 .intro {
@@ -260,9 +258,9 @@ a:focus {
   }
 }
 .btn {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -277,7 +275,7 @@ a:focus {
 .btn-default:focus {
   border: 1px solid #327ab7;
   outline: none;
-  color: black;
+  color: white;
   background-color: #327ab7;
 }
 ul.banner-social-buttons {
@@ -321,8 +319,10 @@ ul.social-buttons li a:active {
   background-color: #327ab7;
 }
 .placeholder-font {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
+  font-weight: 400;
   color: #aaaaaa;
 }
 section#contact .form-group {
@@ -330,7 +330,7 @@ section#contact .form-group {
 }
 section#contact .form-group input,
 section#contact .form-group textarea {
-  padding: 20px;
+  padding: 10px;
 }
 section#contact .form-group input.form-control {
   height: auto;
@@ -343,25 +343,33 @@ section#contact .form-control:focus {
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
+  font-weight: 400;
   color: #aaaaaa;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
+  font-weight: 400;
   color: #aaaaaa;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
+  font-weight: 400;
   color: #aaaaaa;
 }
 section#contact :-ms-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
+  font-weight: 400;
   color: #aaaaaa;
 }
 section#contact .text-danger {
