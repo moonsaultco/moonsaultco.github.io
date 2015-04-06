@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="40px" viewBox="0 0 80 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Rectangle 16</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M0,0 L0,40 L80,40 L80,0 L0,0 Z M9,6 L9,16 L19,16 L19,6 L9,6 Z M29,6 L29,16 L39,16 L39,6 L29,6 Z M49,6 L49,16 L59,16 L59,6 L49,6 Z" id="Rectangle-16" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
