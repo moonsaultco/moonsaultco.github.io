@@ -23,7 +23,14 @@ python -m SimpleHTTPServer 4000
 vagrant ssh
 cd /vagrant
 grunt # now you are watching less files and compiling javascript
+
+# using autoless instead of grunt for teh lazy
+
+autoless less css
+
 ```
+
+
 
 Stock theme doc below here
 

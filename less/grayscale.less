@@ -468,16 +468,10 @@ footer {
     }
 }
 
-::-moz-selection {
+::selection, ::-moz-selection  {
     text-shadow: none;
-    background: #fcfcfc;
-    background: fade(white, 20%);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: fade(white, 20%);
+    background: @primary;
+    background: fade(@primary, 30%);
 }
 
 img::selection {
