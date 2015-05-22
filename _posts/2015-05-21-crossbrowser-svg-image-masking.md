@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Masking images with SVG
-subtitle: a cross-browser safe way to mask images with svg
+title: "Masking images with SVG"
+date: 2015-05-21 12:00:00
+subtitle: "a cross-browser safe way to mask images with svg"
+author: "Chad Baudoin"
 ---
 
 I went through a bunch of trouble trying to figure out how to create a crossbrowser solution to making images with SVG.  Initially I looked into css3 clipping and masking properties which are beautify and modern solutions.  The catchall solution is actually embedding the image and a clip path in an SVG element.  Then you apply the clippath to the element and ta-da!  You have a crossbrowser solution to masking images.
