@@ -2,30 +2,19 @@
 
 ### Prerequisites
 
-* [Vagrant](https://www.vagrantup.com)
-* [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
-* [Virtualbox Guest Plugin](http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/)
+* Ruby
+* Bundler
 
 
 ### Instructions
 
 ```bash
-git clone git@github.com:moonsaultco/moonsaultco.github.io.git
-cd moonsaultco.github.io.git
-vagrant up # some coffee, it's going to be a while
-vagrant ssh
+bundle install
+bundle exec jekyll serve
 
-# now you are in a linux machine
-cd /vagrant
-python -m SimpleHTTPServer 4000
-
-# open a new terminal window
-vagrant ssh
-cd /vagrant
 grunt # now you are watching less files and compiling javascript
 
 # using autoless instead of grunt for the lazy
-
 autoless less css
 
 ```

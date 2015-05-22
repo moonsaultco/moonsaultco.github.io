@@ -19,7 +19,7 @@
 .box-sizing {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body {
@@ -316,7 +316,7 @@ section.white {
     }
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -333,7 +333,7 @@ section.white {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -540,3 +540,35 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: fade(white, 20%);
 }
+
+// anything blog related here
+.blog{
+  .intro {
+    background-image: url(../img/satellite.jpg)
+  }
+}
+
+.blog-post{
+  .navbar-custom{
+    background-color: #333;
+    position: relative;
+  }
+  .post{
+    padding: 3% 6%;
+    h1, h2, h3, h4, h5, h6{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+@media(min-width:767px) {
+    .blog-post{
+      .post{
+        padding: 3% 18%;
+      }
+    }
+}
+
+@import "syntax.less";
