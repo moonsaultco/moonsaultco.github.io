@@ -480,6 +480,10 @@ body {
 .blog .intro {
   background-image: url(../img/satellite.jpg);
 }
+.blog-post img {
+  width: 100%;
+  height: auto;
+}
 .blog-post .navbar-custom {
   background-color: #333;
   position: relative;
@@ -495,6 +499,7 @@ body {
 .blog-post .post h6 {
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 1.1em;
 }
 @media (min-width: 767px) {
   .blog-post .post {
