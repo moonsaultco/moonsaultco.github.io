@@ -1,38 +1,19 @@
 ---
-layout: default
-title: Moonsault Software - Blog - Software Consulting in Denver, CO
+layout: post
+title: Moonsault Software - Blog
 pageName: blog
 ---
 
-<!-- Header -->
-<header class="intro">
-<div class="intro-body">
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <!-- <h1 class="brand-heading">Grayscale</h1> -->
-            <div class="icon-logo">
+<section class="">
 
-            </div>
-            <p class="intro-text">
-                Recent Posts
-            </p>
-        </div>
-    </div>
-</div>
-</div>
-</header>
-
-<section class="section-wrap">
-
-<h2 class="text-center">Recent Posts</h2>
+<p class="text-center">– Recent Posts –</p>
 <ul class="list list-unstyled">
   {% for post in site.posts %}
     <li>
       <h2>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </h2>
-      <small>{{ post.excerpt | truncatewords: 20 }}</small>
+     {{ post.excerpt | truncatewords: 40 }}
     </li>
   {% endfor %}
 </ul>
