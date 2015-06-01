@@ -6,7 +6,7 @@ date:       2015-06-01 12:00:00
 author:     "John Phillips"
 ---
 
-If you have worked with any kind of designer, chances are you have seen you fair share of “Lorem ipsum.” This bit of latin text is the go to when you need to mocking up a design. It is used when the design work is being done before the “content” has been written.
+If you have worked with any kind of designer, chances are you have seen you fair share of “Lorem ipsum.” This bit of latin text is the go to when you need to mock up a design. It is used when the design work is being done before the “content” has been written.
 
 If you are designing a template for a news story, or really any kind of template that could hold different kinds of content, then “lorem ipsum” makes sense. But, there is an awful lot of UX design that is not served by the assumption that you are designing for “unknown” content to be created later. Often it is better to start by figuring out exactly what text and images will be shown, so you can figure out the best design for that content. The fancy UX term for this is a content inventory.
 
