@@ -12,9 +12,9 @@ If you are designing a template for a news story, or really any kind of template
 
 As an aside: calling text “content” is actually part of the problem. The thinking is that “content” or writing is somebody else’s problem and it encourages you to treat is an amorphous blob to be filled in later.
 
-An examples will illustrate my point: A client and I were working on the design for a skills quiz. The basic idea was to ask a series of multiple choice questions in order to gauge how proficient someone was at a specific skill. Our plan was that each question would have 4 or 5 answers arranged in increasing order of proficiency. So if you had some degree of the skill, you’d choose answer A, if you had more you’d choose B, and if you were an expert you’d choose D or E. Our thought was that you’d be able to pick the answer that best described your skill level, click it and then we’d show the next question. (This was the first step in a longer process, so we weren’t worried about people gaming the system and just clicking D for every answer.)
+An example will illustrate my point: A client and I were working on the design for a skills quiz. The basic idea was to ask a series of multiple choice questions in order to gauge how proficient someone was at a specific skill. Our plan was that each question would have 4 or 5 answers arranged in increasing order of proficiency. So if you had some degree of the skill, you’d choose answer A, if you had more you’d choose B, and if you were an expert you’d choose D or E. Our thought was that you’d be able to pick the answer that best described your skill level, click it and then we’d show the next question. (This was the first step in a longer process, so we weren’t worried about people gaming the system and just clicking D for every answer.)
 
-Had we used “lorem ipsum” of some other kind of filler text, this design might have survived. Instead of doing this, though, we took the time to write some sample questions and answers. And right away our plan was in trouble. After writing a few questions, we realized that it wasn’t easy to make the answers exist in an obvious continuum. Consider this fabricated but illustrative sample question:
+Had we used “lorem ipsum” or some other kind of filler text, this design might have survived. Instead of doing this, though, we took the time to write some sample questions and answers. And right away our plan was in trouble. After writing a few questions, we realized that it wasn’t easy to make the answers exist in an obvious continuum. Consider this fabricated but illustrative sample question:
 
 <blockquote>
 
@@ -29,7 +29,7 @@ Had we used “lorem ipsum” of some other kind of filler text, this design mig
 	
 </blockquote>	
 
-Is it clear that answers are on a continuum? Even if if it is, how do we instruct you to click the most complex answer you recognize as true? 
+Is it clear that the answers are on a continuum? Even if if it is, how do we instruct you to click on the most complex answer you recognize as true? 
 
 In the original design, we thought you have to click once on each question. Once we had written the questions we realized it was easier to understand if we instructed you to click all of the answers you agreed with and then click a button to see the next question. This requires more clicking, but less thinking. It feels easier even though you are more active.
 
