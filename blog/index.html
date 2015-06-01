@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Moonsault Software - Blog
+title: Recent Posts
 pageName: blog
 ---
 
 <section class="">
 
-<p class="text-center">– Recent Posts –</p>
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="author">
-    <span class="date">{{ post.date | date: "%Y %h" }}</span>
+    {{ post.author }} on
+    <span class="date">{{ post.date | date: "%A %B %-d, %Y" }}</span>
   </p>
   <div class="content">
     {{ post.excerpt | truncatewords: 40 }}
