@@ -4,10 +4,15 @@ title: Recent Posts
 pageName: blog
 ---
 
-<section class="">
+<section>
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
+  {% capture curMonth %}{{ post.date | date: '%b'}}{% endcapture %}
+  {% if curMonth != outMonth %}
+    {% capture outMonth %}{{ post.date | date: '%b'}}{% endcapture %}
+    <span>{{ post.date | date: '%b, %Y'}}</span>
+  {% endif %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="author">
     {{ post.author }} on

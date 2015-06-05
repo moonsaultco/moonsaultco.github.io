@@ -36,6 +36,10 @@ h6 {
   margin: 24px 0 0;
   line-height: 24px;
 }
+h1 {
+  font-size: 36px;
+  line-height: 36px;
+}
 h2 {
   margin-top: 0;
   margin-bottom: 31px;
@@ -501,7 +505,10 @@ body {
 @media (min-width: 767px) {
   .blog-post .post {
     max-width: 50em;
-    margin: 0 auto;
+    margin: 3px auto;
+  }
+  .blog-post .post-content {
+    margin-top: 24px;
   }
 }
 .highlight {
