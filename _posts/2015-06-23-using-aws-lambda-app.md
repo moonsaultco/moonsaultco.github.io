@@ -62,7 +62,7 @@ AWS IAM (Security & Access Management) has always perplexed me and it always see
 * Click Create Policy and then “Create Your Own Policy”
 * Name the policy something meaningful and paste this in…
 
-```
+{% highlight json %}
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -78,7 +78,7 @@ AWS IAM (Security & Access Management) has always perplexed me and it always see
         }
     ]
 }
-```
+{% endhighlight %}
 
 Before you save this make sure you fill in the Resource id, which can be found by going to your Lambda function list and click on your function.  It will say ARN and look like this…arn:aws:lambda:us-east-1:330367632134:function:my-function-name
 
@@ -94,7 +94,7 @@ When you created your Lambda function you also created a Role. So, we’re going
 * Click on the Role that was created (it tells you in your Lambda config page). Mine was lambda_basic_execution.
 * Click Edit Policy on your inline policy and paste the below. It’s telling us that our function can be invoked directly.  Other ways it can be invoked are through events (S3 uploads, SQS Messages, etc.)
 
-```
+{% highlight json %}
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -114,7 +114,7 @@ When you created your Lambda function you also created a Role. So, we’re going
         }
     ]
 }
-```
+{% endhighlight %}
 
 We’ve created the user that will execute the code (via Cognito) and we’ve created the code to be executed (via Lambda). Now we need to be able to let them execute. All this is done via IAM.
 
