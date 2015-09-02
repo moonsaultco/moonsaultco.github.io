@@ -3,10 +3,6 @@
 
 @text-on-white: #555;
 
-@base-font-size: 21px;
-@medium-font-size: 120%;
-@large-font-size: 180%;
-
 
 @import (inline) "normalize.css";
 
@@ -31,4 +27,17 @@
 
 @media (min-width: 768px) {
   @import "tablets.less";
+}
+
+@media (min-width: 1010px) {
+  @base-font-size: 21px;
+  body {
+   font-size: @base-font-size;
+  }
+  
+  .screenshot img {
+    max-width: 120%;
+    margin-left: -10%;
+  }
+  
 }

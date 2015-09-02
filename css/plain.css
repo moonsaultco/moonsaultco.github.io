@@ -434,7 +434,7 @@ th {
 /* == Typography == */
 .base-font {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 21px;
+  font-size: 15px;
   line-height: 1.4em;
 }
 .contrast-font {
@@ -450,7 +450,7 @@ th {
 }
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 21px;
+  font-size: 15px;
   line-height: 1.4em;
   background-color: #004b77;
   color: rgba(255, 255, 255, 0.85);
@@ -466,7 +466,7 @@ h4 {
 }
 h5,
 h6 {
-  font-size: 21px;
+  font-size: 15px;
 }
 h1,
 h2,
@@ -477,12 +477,12 @@ h6 {
   font-family: "jaf-bernino-sans-condensed", sans-serif;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 10.5px;
+  margin-bottom: 7.5px;
   font-weight: 800;
 }
 p {
   margin-top: 0;
-  margin-bottom: 31.5px;
+  margin-bottom: 22.5px;
 }
 nav {
   text-transform: uppercase;
@@ -592,9 +592,6 @@ footer {
   margin: 0 auto;
 }
 @media (max-width: 767px) {
-  body {
-    font-size: 15px;
-  }
   .wrap {
     width: 100%;
     padding: 0 10px;
@@ -614,6 +611,14 @@ footer {
   }
 }
 @media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1010px) {
+  body {
+    font-size: 21px;
+  }
   .screenshot img {
     max-width: 120%;
     margin-left: -10%;
