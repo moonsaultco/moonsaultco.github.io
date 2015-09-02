@@ -1,0 +1,34 @@
+@moon-blue: #004B77;
+@pale-white: rgba(255, 255, 255, 0.85);
+
+@text-on-white: #555;
+
+@base-font-size: 21px;
+@medium-font-size: 120%;
+@large-font-size: 180%;
+
+
+@import (inline) "normalize.css";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// fluid responsive grid - http://fluidable.com/
+//@import "fluidable.less";
+
+
+// basic styles, targeting mobile first, shared other breakpoints
+@import "mobile-first.less";
+
+//styles served just to mobile 
+@media (max-width: 767px) {
+  @import "mobile-only.less";
+}
+
+
+@media (min-width: 768px) {
+  @import "tablets.less";
+}

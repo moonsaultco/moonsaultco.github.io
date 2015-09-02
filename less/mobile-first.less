@@ -1,0 +1,174 @@
+/* == Typography == */
+
+.base-font {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: @base-font-size;
+	line-height: 1.4em;
+}
+
+.contrast-font {
+	font-family: "museo-sans-condensed", sans-serif;
+}
+
+.heading-font {
+	.contrast-font;
+	text-transform: uppercase;
+	color: white;
+}
+
+.no-top {
+	margin-top: 0;
+}
+
+body {
+	.base-font;
+	background-color: @moon-blue;
+	color: @pale-white;
+	padding-top: 30px;
+	//border-top: 7px #000 solid;
+}
+
+
+h1, h2 {
+	font-size: @large-font-size;
+}
+
+h3, h4 {
+	font-size: @medium-font-size;
+}
+
+h5, h6 {
+	font-size: @base-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	.heading-font;
+	margin-bottom: @base-font-size / 2 ;
+	font-weight: 900;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: @base-font-size * 1.5;
+}
+
+nav	{
+	.heading-font;
+	font-size: 75%;
+	padding: 7px 0;
+	text-align: center;
+	a {
+		border: none;
+		padding: 3px 7px;
+		margin: 0 .5em;
+		border-radius: 20px;
+		&:hover {
+			background-color: rgba(255,255,255,0.1);
+			border: none;
+		}
+	}
+}
+
+.tagline {
+	font-size:@medium-font-size ;
+	margin-bottom: 3em;
+	color: white;
+	text-align: center;
+	font-style: italic;
+}
+
+.divider {
+	height: 2px;
+	background-color: rgba(255,255,255,0.25);
+	margin: 1.5em 0 2em;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px white dotted;
+	padding-bottom: 1px;
+	.transition;
+	&:hover {
+		border-bottom: 1px white solid;
+	}
+}
+
+blockquote {
+	border-left: 4px rgba(255,255,255,0.5) solid;
+	margin-left: 0;
+	padding-left: 1.5em;
+}
+
+.white {
+	background-color: white;
+	color: @text-on-white;
+	h1, h2, h3, h4, h5, h6 {
+		color: darken(@text-on-white, 10%);
+	}
+	a {
+		color: lighten(@moon-blue, 10%);
+		//border-bottom: 1px @moon-blue dotted;
+		padding: 0 3px;
+		&:hover {
+			border-bottom: none;
+			background: rgba(0,75,119,0.1);
+		}
+	}
+	
+	.subhead {
+		color: lighten(@text-on-white, 20%) ;
+		margin: 0;
+	}
+	
+	h4 .pop {
+		color: lighten(@text-on-white, 20%);
+	}
+}
+
+
+.transition {
+	transition: all 0.5s ease-in-out;
+}
+
+
+/* == Basic Page Layout == */
+
+nav {
+	background: @moon-blue;
+	height: 40px;
+	position: fixed;
+	top: 0;
+	transition: top 0.2s ease-in-out;
+	width: 100%;
+}
+
+.nav-up {
+	top: -40px;
+}
+
+.wrap {
+	width: 40em;
+	margin: 0 auto;
+}
+
+.white {
+	padding: 2em 0;
+	margin: 2em 0;
+}
+
+.logo {
+	width: 50%;
+	display: block;
+	margin: 3em auto;
+}
+
+.screenshot img {
+	border: 1px #dddddd solid;
+	max-width: 100%;
+	margin: 1em 0;
+}
+
+footer {
+	.wrap;
+}
