@@ -438,10 +438,10 @@ th {
   line-height: 1.4em;
 }
 .contrast-font {
-  font-family: "museo-sans-condensed", sans-serif;
+  font-family: "jaf-bernino-sans-condensed", sans-serif;
 }
 .heading-font {
-  font-family: "museo-sans-condensed", sans-serif;
+  font-family: "jaf-bernino-sans-condensed", sans-serif;
   text-transform: uppercase;
   color: white;
 }
@@ -474,20 +474,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "museo-sans-condensed", sans-serif;
+  font-family: "jaf-bernino-sans-condensed", sans-serif;
   text-transform: uppercase;
   color: white;
   margin-bottom: 10.5px;
-  font-weight: 900;
+  font-weight: 800;
 }
 p {
   margin-top: 0;
   margin-bottom: 31.5px;
 }
 nav {
-  font-family: "museo-sans-condensed", sans-serif;
   text-transform: uppercase;
-  color: white;
   font-size: 75%;
   padding: 7px 0;
   text-align: center;
