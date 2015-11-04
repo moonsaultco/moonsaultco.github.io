@@ -442,7 +442,6 @@ th {
 }
 .heading-font {
   font-family: "jaf-bernino-sans-condensed", sans-serif;
-  text-transform: uppercase;
   color: white;
 }
 .no-top {
@@ -475,7 +474,6 @@ h4,
 h5,
 h6 {
   font-family: "jaf-bernino-sans-condensed", sans-serif;
-  text-transform: uppercase;
   color: white;
   margin-bottom: 7.5px;
   font-weight: 800;
@@ -492,13 +490,13 @@ nav {
 }
 nav a {
   border: none;
-  padding: 3px 7px;
+  background-color: transparent;
+  padding: 3px 10px;
   margin: 0 .5em;
   border-radius: 20px;
 }
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  border: none;
 }
 .tagline {
   font-size: 120%;
@@ -516,11 +514,10 @@ a {
   color: white;
   text-decoration: none;
   border-bottom: 1px white dotted;
-  padding-bottom: 1px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 a:hover {
-  border-bottom: 1px white solid;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 blockquote {
   border-left: 4px rgba(255, 255, 255, 0.5) solid;
@@ -544,6 +541,7 @@ blockquote {
   padding: 0 3px;
 }
 .white a:hover {
+  color: #004b77;
   border-bottom: none;
   background: rgba(0, 75, 119, 0.1);
 }
@@ -555,7 +553,7 @@ blockquote {
   color: #888888;
 }
 .transition {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 /* == Basic Page Layout == */
 nav {
@@ -576,6 +574,16 @@ nav {
 .white {
   padding: 2em 0;
   margin: 2em 0;
+}
+.head-image {
+  margin-top: -2em;
+  text-align: center;
+}
+.head-image img {
+  min-width: 40em;
+}
+.blog-post img {
+  max-width: 100%;
 }
 .logo {
   width: 50%;

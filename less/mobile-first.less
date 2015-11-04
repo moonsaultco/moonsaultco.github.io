@@ -16,7 +16,7 @@
 
 .heading-font {
 	.contrast-font;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	color: white;
 }
 
@@ -64,12 +64,13 @@ nav	{
 	text-align: center;
 	a {
 		border: none;
-		padding: 3px 7px;
+		background-color: transparent;
+		padding: 3px 10px;
 		margin: 0 .5em;
 		border-radius: 20px;
 		&:hover {
 			background-color: rgba(255,255,255,0.1);
-			border: none;
+			//border: none;
 		}
 	}
 }
@@ -90,12 +91,16 @@ nav	{
 
 a {
 	color: white;
+	//background-color: rgba(255,255,255,0.05);
+	//font-weight: bold;
+	//padding: 1px 3px;
 	text-decoration: none;
 	border-bottom: 1px white dotted;
-	padding-bottom: 1px;
+	//padding-bottom: 1px;
 	.transition;
 	&:hover {
-		border-bottom: 1px white solid;
+		//border-bottom: 1px white solid;
+		background-color: rgba(255,255,255,0.1);
 	}
 }
 
@@ -116,6 +121,7 @@ blockquote {
 		//border-bottom: 1px @moon-blue dotted;
 		padding: 0 3px;
 		&:hover {
+			color: @moon-blue;
 			border-bottom: none;
 			background: rgba(0,75,119,0.1);
 		}
@@ -133,7 +139,7 @@ blockquote {
 
 
 .transition {
-	transition: all 0.5s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 
@@ -160,6 +166,23 @@ nav {
 .white {
 	padding: 2em 0;
 	margin: 2em 0;
+}
+
+.white.post {
+	//padding-top: 0;
+}
+
+.head-image {
+	margin-top: -2em;
+	text-align: center;
+	img {
+		min-width: 40em;
+	}
+}
+
+.blog-post img {
+	max-width: 100%;
+	//height: auto;
 }
 
 .logo {
