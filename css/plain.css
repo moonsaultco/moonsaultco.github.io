@@ -438,10 +438,10 @@ th {
   line-height: 1.4em;
 }
 .contrast-font {
-  font-family: "jaf-bernino-sans-condensed", sans-serif;
+  font-family: "proxima-nova", sans-serif;
 }
 .heading-font {
-  font-family: "jaf-bernino-sans-condensed", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   color: white;
 }
 .no-top {
@@ -473,7 +473,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "jaf-bernino-sans-condensed", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   color: white;
   margin-bottom: 7.5px;
   font-weight: 800;
@@ -483,7 +483,7 @@ p {
   margin-bottom: 22.5px;
 }
 nav {
-  text-transform: uppercase;
+  font-family: "proxima-nova", sans-serif;
   font-size: 75%;
   padding: 7px 0;
   text-align: center;

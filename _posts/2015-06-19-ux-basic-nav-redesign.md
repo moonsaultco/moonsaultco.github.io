@@ -3,9 +3,10 @@ layout:     post
 title:      "UX Work: Navigation Redesign"
 date:       2015-06-19 12:00:00
 author:     "John Phillips"
+headImage: '![UX redeisgn before and after image](/img/blog/2015-06-19/ascent.png )'
+
 ---
 
-<img src="/img/blog/2015-06-19/ascent.png" alt="before and after image">
 
 The image above shows the results of some UX work we recently completed for AscentCRM, a redesign of the navigation of their application. The goals of the project were to simplify the navigation and future proof it a bit. This should lower their support costs and make it easier for their users to to find things. While we were swinging hammers, we updated the visual design a bit. 
 
