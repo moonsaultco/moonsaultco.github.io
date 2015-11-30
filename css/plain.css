@@ -622,6 +622,9 @@ footer {
   body {
     font-size: 17px;
   }
+  .logo {
+    max-width: 300px ;
+  }
 }
 @media (min-width: 1010px) {
   body {
