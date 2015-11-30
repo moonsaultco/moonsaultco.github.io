@@ -2,89 +2,65 @@
 layout: home
 title: Moonsault Software - Software Consulting in Denver, CO
 ---
-
 <div class="wrap">
-    
+
     <div class="tagline" id="about">
         We design and build software for the web. Software people like.
     </div>
-    
-    
+
     <h2 >About Us</h2>
-    
+
     <p>Moonsault is a partnership between <a href="https://www.linkedin.com/in/chadbaudoin">Chad Baudoin</a> and <a href="https://www.linkedin.com/in/johnphillipsdenver">John Phillips</a>. </p>
-    
+
     <p>Chad is a full stack web developer who is great with HTML, CSS, Javascript, and Node.js. He has also worked with backend technologies and databases, but his passion is making interfaces that are usable and fast. </p>
-    
+
     <p>John is a user experience designer. He has designed web and mobile applications. John got his start designing Mac and Windows programs. He designed Six Degrees, an automatic email & document tracking application that won best Best of Show at MacWorld in 2002.</p>
 
-    
+
     <h3>Contact Us</h3>
-    
+
     <p><a href="&#109;&#97;&#x69;l&#x74;o:h&#x65;l&#108;o&#64;&#109;&#x6F;&#x6F;&#x6E;&#x73;a&#117;l&#x74;&#x2E;&#99;&#111;">h&#x65;l&#108;o&#64;&#109;&#x6F;&#x6F;&#x6E;&#x73;a&#117;l&#x74;&#x2E;&#99;&#111;</a></p>
 
-    
+
 </div>
 
 <section id="work" class="white">
 <div class="wrap">
     <h2 class="no-top">Our Work</h2>
     <h3 class="subhead">Some Recent Highlights</h3>
-    
-    <div class="screenshot">
-        <img src="/img/work/revel-companies-details-b.png" class="first">
-    </div>
-    
-    <div class="text">
-        <h4>Revel Talent <span class="pop">Top Companies</span></h4>
-        <p>Revel Talent is changing the way marketers manage their careers and how great companies find them. They help marketing professionals decide when to change jobs and help evaluate which companies are a good fit. Revel came to us with the idea to build a curated list of top companies, combining available information with research and analysis they perform.</p>
-    
-        <p>We created a responsive application that helps marketing professionals research companies and plan their careers. The app pulls data from four sources and incorporates research done by Revel Talent staff to build a comprehensive company profile. We were involved in all phases of the project from UX Design through planning, picking technologies and building the application. Using a search based datastore, two microservices and a node.js based architecture we were able to deliver in less than a month.</p>
-    
-        <p><a href="//companies.reveltalent.com">companies.reveltalent.com</a>
-    </p></div>
-    
-    <div class="screenshot">
-        <img src="/img/work/revel-companies-mobile.png">
-    </div>
-    
-    <div class="screenshot">
-        <img src="/img/work/revel-companies-results.png">
-    </div>
-    
-    <div class="text">
-        <h4>Placeable <span class="pop">Workbench</span></h4>
-    
-        <p>
-        Workbench is a SaaS Location Data Warehouse product. John was the Lead UX Designer and Chad was the Lead Developer. It allows large brands to get the most out of their location data. It helps them find and fix problems in their data. Usability of the app consistently rated highly by users.</p>
-    
-        <p>The app requires a login, but you can see some additional screenshots on John’s personal site <a href="//infomongo.com">infomongo.com</a></p>
-    
-    </div>
-    
-    <div class="screenshot">
-        <img src="/img/work/pw-dash-100.png">
-    </div>
-    
-    <div class="screenshot">
-        <img src="/img/work/pw-location-100.png">
-    </div>
-    
-    <div class="text">
-        <h4>Location Insight <span class="pop">Site Dashboard</span></h4>
-    
-        <p>
-        This was an internal tool developed to show how an individual site was performing. It was designed to display on a large flatscreen TV in the common area. </p>
-    
-    
-    </div>
-    
-    <div class="screenshot">
-        <img src="/img/work/black-dashboard.png">
-    </div>
 
+    {% assign sorted_pages = site.pages | sort:"ordinal" %}
+    {% for work in sorted_pages reversed %}
+      {% if work.path contains "work/" and work.path != "work/index.html" %}
+
+        {% for screenshot in work.primary-screenshots %}
+          <div class="screenshot">
+              <img alt="{{screenshot[0]}}" title="{{screenshot[0]}}" src="{{screenshot[1]}}" class="first">
+          </div>
+        {% endfor %}
+
+        <div class="text">
+            <a href="{{work.url}}">
+              <h4 itemprop="name">
+                {{work.title}}
+                {% if work.subtitle %}
+                <span class="pop">{{work.subtitle}}</span>
+                {% endif%}
+              </h4>
+            </a>
+            <div itemprop="articleBody" class="post-content">
+            {{ work.content | markdownify }}
+            </div>
+        </div>
+
+        {% for screenshot in work.screenshots %}
+          <div class="screenshot">
+              <img alt="{{screenshot[0]}}" title="{{screenshot[0]}}" src="{{screenshot[1]}}">
+          </div>
+        {% endfor %}
+
+      {% endif %}
+    {% endfor %}
 </div>
 
 </section>
-
-
