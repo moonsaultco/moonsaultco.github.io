@@ -26,7 +26,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="{{ page.pageName }}">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="{{ page.pageName }} home">
 
   {% assign linkPrefix = '' %}
   {% if page.pageName contains 'blog' %}
@@ -35,13 +35,13 @@
 
     <!-- Navigation -->
     <nav>
-      <a href="/" class="page-scroll">Home</a>
-      <a href="/#work" class="page-scroll">Recent Work</a>
+      <a href="#about" class="page-scroll">About Us</a>
+      <a href="#work" class="page-scroll">Recent Work</a>
       <a href="/blog">Blog</a>
     </nav>
     
     <div class="wrap">
-        <a href="/"><img class="logo" src="/img/logo-reversed.png"></a>
+        <img class="logo" src="/img/logo-reversed.png">
     </div>
                   
     {{ content }}
