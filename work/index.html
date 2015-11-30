@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="wrap">
+{% assign sorted_pages = site.pages | sort:"ordinal" %}
+{% for work in sorted_pages reversed %}
+  {% if work.path contains "work/" and work.path != "work/index.html"%}
+    <div class="text">
+        <a href="{{work.url}}">
+          <h4 itemprop="name">
+            {{work.title}}
+            {% if work.subtitle %}
+            <span class="pop">{{work.subtitle}}</span>
+            {% endif%}
+          </h4>
+        </a>
+    </div>
+  {% endif %}
+{% endfor %}
+</div>

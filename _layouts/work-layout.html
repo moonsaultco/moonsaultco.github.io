@@ -1,0 +1,32 @@
+---
+layout: default
+pageName: work-piece
+---
+<section id="work" class="white">
+  <div class="wrap">
+
+      {% for screenshot in page.primary-screenshots %}
+        <div class="screenshot">
+            <img alt="{{screenshot[0]}}" title="{{screenshot[0]}}" src="{{screenshot[1]}}" class="first">
+        </div>
+      {% endfor %}
+
+      <div class="text">
+          <h4 itemprop="name">
+            {{page.title}}
+            {% if page.subtitle %}
+            <span class="pop">{{page.subtitle}}</span>
+            {% endif%}
+          </h4>
+          <div itemprop="articleBody" class="post-content">
+          {{ content }}
+          </div>
+      </div>
+
+      {% for screenshot in page.screenshots %}
+        <div class="screenshot">
+            <img alt="{{screenshot[0]}}" title="{{screenshot[0]}}" src="{{screenshot[1]}}">
+        </div>
+      {% endfor %}
+  </div>
+</section>

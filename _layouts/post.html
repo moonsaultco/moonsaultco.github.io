@@ -3,7 +3,7 @@ layout: default
 pageName: blog-post
 ---
 <section class='post white' itemscope itemtype="http://schema.org/Article">
-  
+
     {% if page.headImage %}
       <div class="head-image">
           {{ page.headImage | markdownify }}
@@ -14,11 +14,11 @@ pageName: blog-post
       {% if page.subtitle %}
       <h3>{{page.subtitle}}</h3>
       {% endif%}
-    
+
       <div itemprop="articleBody" class="post-content">
       {{ content }}
       </div>
-    
+
       {% if page.author %}
       <p class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
         by
