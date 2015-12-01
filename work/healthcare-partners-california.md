@@ -16,6 +16,4 @@ They came to us with the idea of taking their existing information and making it
 
 The original plan for the project was to create native iOS and Android apps, but due to a tight timeline (6 weeks), we suggested a responsive web application which removed the extra time for app store approval and allowed for fast updates.
 
-Want to hear more? Reach out to us at [hello@moonsault.co](mailto:hello@moonsault.co).
-
 [agentsinca.com](https://agentsinca.com "Agent")

@@ -4,6 +4,8 @@ pageName: work-piece
 ---
 <section id="work" class="white">
   <div class="wrap">
+    
+    <h1>{{page.title}} <span class="pop">{{page.subtitle}}</span></h1>
 
       {% for screenshot in page.primary-screenshots %}
         <div class="screenshot">
@@ -12,12 +14,6 @@ pageName: work-piece
       {% endfor %}
 
       <div class="text">
-          <h4 itemprop="name">
-            {{page.title}}
-            {% if page.subtitle %}
-            <span class="pop">{{page.subtitle}}</span>
-            {% endif%}
-          </h4>
           <div itemprop="articleBody" class="post-content">
           {{ content }}
           </div>
@@ -28,5 +24,11 @@ pageName: work-piece
             <img alt="{{screenshot[0]}}" title="{{screenshot[0]}}" src="{{screenshot[1]}}">
         </div>
       {% endfor %}
+      
+          
+      <p>Want to hear more? Reach out to us at <a href="&#109;&#97;&#x69;l&#x74;o:h&#x65;l&#108;o&#64;&#109;&#x6F;&#x6F;&#x6E;&#x73;a&#117;l&#x74;&#x2E;&#99;&#111;">h&#x65;l&#108;o&#64;&#109;&#x6F;&#x6F;&#x6E;&#x73;a&#117;l&#x74;&#x2E;&#99;&#111;</a></p>
+      
   </div>
+
+  
 </section>

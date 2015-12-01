@@ -40,14 +40,12 @@ title: Moonsault Software - Software Consulting in Denver, CO
         {% endfor %}
 
         <div class="text">
-            <a href="{{work.url}}">
-              <h4 itemprop="name">
-                {{work.title}}
+              <h4 itemprop="name" class="work-name">
+                <a href="{{work.url}}">{{work.title}}</a>
                 {% if work.subtitle %}
                 <span class="pop">{{work.subtitle}}</span>
                 {% endif%}
               </h4>
-            </a>
             <div itemprop="articleBody" class="post-content">
             {{ work.content | markdownify }}
             </div>
@@ -60,6 +58,9 @@ title: Moonsault Software - Software Consulting in Denver, CO
         {% endfor %}
 
       {% endif %}
+      
+      <div class="margin-top"></div>
+      
     {% endfor %}
 </div>
 

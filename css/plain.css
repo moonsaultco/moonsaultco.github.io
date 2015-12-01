@@ -447,6 +447,9 @@ th {
 .no-top {
   margin-top: 0;
 }
+.margin-top {
+  margin-top: 6em;
+}
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
@@ -545,11 +548,14 @@ blockquote {
   border-bottom: none;
   background: rgba(0, 75, 119, 0.1);
 }
+.white .work-name {
+  margin-top: 0;
+}
 .white .subhead {
   color: #888888;
   margin: 0;
 }
-.white h4 .pop {
+.white .pop {
   color: #888888;
 }
 .transition {
