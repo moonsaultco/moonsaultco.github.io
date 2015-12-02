@@ -1,5 +1,5 @@
 ---
-ordinal: 4
+ordinal: 6
 layout:     work-layout
 title:      "HeathCare Partners"
 subtitle:   "Provider Locator"
