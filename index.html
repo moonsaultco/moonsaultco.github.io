@@ -31,7 +31,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 
     {% assign sorted_pages = site.pages | sort:"ordinal" %}
     {% for work in sorted_pages reversed %}
-      {% if work.path contains "work/" and work.path != "work/index.html" %}
+      {% if work.path contains "work/" and work.path != "work/index.html" and work.showOnHome != false %}
 
         {% for screenshot in work.primary-screenshots %}
           <div class="screenshot">
@@ -58,9 +58,9 @@ title: Moonsault Software - Software Consulting in Denver, CO
         {% endfor %}
 
       {% endif %}
-      
+
       <div class="margin-top"></div>
-      
+
     {% endfor %}
 </div>
 
