@@ -3,6 +3,7 @@ ordinal: 4
 layout:     work-layout
 title:      "Tendril"
 subtitle:   "Home and Market consumption tool"
+showOnHome: false
 screenshots:
   "Home and Market Home": "/img/work/tendril-home-market-1.png"
   "Home and Market Detail": "/img/work/tendril-home-market-3.png"
