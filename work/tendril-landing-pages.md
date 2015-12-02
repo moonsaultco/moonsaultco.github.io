@@ -13,4 +13,4 @@ screenshots:
 
 Tendril Networks provides a cloud platform for energy service providers. Tendril approached us to use their existing APIs and home energy modeling to test landing page engagement.
 
-We created three campaigns to test the user engagement with and without Tendril data. Each campaigns was split url tested with personalized, non-personalized and generic variants.
+We created three campaigns to test the engagement of page with and without Tendril data. Each campaign was split URL tested with personalized, non-personalized and generic variants.
