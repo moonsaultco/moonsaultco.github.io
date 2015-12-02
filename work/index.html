@@ -1,26 +1,29 @@
 ---
 layout: default
+title: "Recent Work"
 ---
 <section  class="white">
-  
+
   <div class="wrap">
-    
+
     <h1>Our Work</h1>
-    
+
   {% assign sorted_pages = site.pages | sort:"ordinal" %}
   {% for work in sorted_pages reversed %}
     {% if work.path contains "work/" and work.path != "work/index.html"%}
       <div class="text">
-          
+
           <h4 itemprop="name">
             <a href="{{work.url}}">{{work.title}}</a>
             {% if work.subtitle %}
             <span class="pop">{{work.subtitle}}</span>
             {% endif%}
           </h4>
-          
+
       </div>
     {% endif %}
   {% endfor %}
+
+  <p>Want to hear more about our work? Reach out to us at <a href="mailto:hello@moonsault.co">hello@moonsault.co</a></p>
   </div>
 </section>
