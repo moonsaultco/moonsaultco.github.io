@@ -31,6 +31,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 
     {% assign sorted_pages = site.pages | sort:"ordinal" %}
     {% for work in sorted_pages reversed %}
+     
       {% if work.path contains "work/" and work.path != "work/index.html" and work.showOnHome != false %}
 
         {% for screenshot in work.primary-screenshots %}
@@ -58,8 +59,13 @@ title: Moonsault Software - Software Consulting in Denver, CO
         {% endfor %}
 
       {% endif %}
+      
+      {% if  work.showOnHome != false %}
+          {% comment %}  the foor loop is going thru all pages, which tends to cause lots of margin-top div to be added {% endcomment %}
 
-      <div class="margin-top"></div>
+        <div class="margin-top"></div>
+      
+      {% endif %}
 
     {% endfor %}
 </div>

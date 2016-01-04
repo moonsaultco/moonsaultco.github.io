@@ -3,6 +3,7 @@ ordinal: 6
 layout:     work-layout
 title:      "HeathCare Partners"
 subtitle:   "Provider Locator"
+showOnHome: false
 primary-screenshots:
   "HeathCare Partners Detail Page": "/img/work/hcpca-desktop-search.png"
 screenshots:
