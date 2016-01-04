@@ -4,8 +4,9 @@ layout:     work-layout
 title:      "Tendril"
 subtitle:   "Home and Market Consumption Tool"
 showOnHome: true
-screenshots:
+primary-screenshots:
   "Home and Market Home": "/img/work/tendril-home-market-1.png"
+screenshots:
   "Home and Market Detail": "/img/work/tendril-home-market-3.png"
 ---
 
