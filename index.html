@@ -5,7 +5,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 <div class="wrap">
 
     <div class="tagline" id="about">
-        We design and build software for the web. Software people like.
+        We design and build apps for the web.
     </div>
 
     <h2 >About Us</h2>
@@ -31,7 +31,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 
     {% assign sorted_pages = site.pages | sort:"ordinal" %}
     {% for work in sorted_pages reversed %}
-     
+
       {% if work.path contains "work/" and work.path != "work/index.html" and work.showOnHome != false %}
 
         {% for screenshot in work.primary-screenshots %}
@@ -57,7 +57,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
               <img alt="{{screenshot[0]}}" title="{{screenshot[0]}}" src="{{screenshot[1]}}">
           </div>
         {% endfor %}
-        
+
         <div class="margin-top"></div>
 
       {% endif %}
