@@ -432,6 +432,9 @@ th {
   box-sizing: border-box;
 }
 /* == Typography == */
+.home-contact {
+  text-align: center;
+}
 .base-font {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
@@ -503,7 +506,7 @@ nav a:hover {
 }
 .tagline {
   font-size: 120%;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   color: white;
   text-align: center;
   font-style: italic;
