@@ -1,0 +1,22 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}Moonsault Software{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	{% capture include_to_scssify %}
+	  {% include index.scss %}
+	{% endcapture %}
+	<style>
+	  	{{ include_to_scssify | scssify }}
+	</style>
+  
+	<link rel="canonical" href="{{site.url}}{{ page.url | replace:'index.html','/' | replace:'.html', '/' }}" />
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+
+</head>
