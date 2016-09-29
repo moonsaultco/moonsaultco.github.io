@@ -3,7 +3,30 @@ layout: main
 title: Moonsault Software - Software Consulting in Denver, CO
 ---
 
-<h1>Test</h1>
+<section class="blue intro">
+	
+	<div class="logo-box">
+		{% include_relative img/logo.svg %}
+	</div>
+	<div class="center block">
+		{% capture into_text %}
+		  {% include_relative content/intro.md %}
+		{% endcapture %}
+		{{ into_text | markdownify }}
+		
+		<p class="center"><a class="button" href="mailto:hello@moonsault.co">Contact Moonsault</a></p>
+	</div>
+	
+	
+</section>
+<section>
+	
+	<h1>Test</h1>
+	
+	
+</section>
+
+
 
 
 <script src="/js/cash.min.js"></script>
