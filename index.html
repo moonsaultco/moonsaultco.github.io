@@ -19,9 +19,29 @@ title: Moonsault Software - Software Consulting in Denver, CO
 	
 	
 </section>
-<section>
+<section class="testimonials">
 	
-	<h1>Test</h1>
+	<div class="testimonial lynda">
+		<span class="mark">“</span>
+		<div class="quote">
+			Moonsault are easy to work with. They helped us make good technology decisions and get things done quickly.
+		</div>
+		<div class="source">
+			— <a href="https://www.linkedin.com/in/lyndacalhoun">Lynda Calhoun</a>, Digital Spark
+		</div>
+		
+	</div>
+	
+	<div class="testimonial aaron hidden">
+		<span class="mark">“</span>
+		<div class="quote">
+			Moonsault was able to take our project and complete it with minimal oversight. Great to be able to just hand them stuff and know they'd get it done right and on time.
+		</div>
+		<div class="source">
+			— Aaron Rich, Engineering Manager at <a href="https://www.tendrilinc.com">Tendril</a>
+		</div>
+		
+	</div>
 	
 	
 </section>
@@ -33,5 +53,29 @@ title: Moonsault Software - Software Consulting in Denver, CO
 <script>
   // going to use cash a lightweight jquery alternative
   // https://github.com/kenwheeler/cash#fnafter
+  
+  $(function(){
+  
+    $('html').addClass('dom-loaded');
+  
+  	// hide all the testimonials
+    $('.testimonial').addClass('hidden');
+    var testimonialCount = $('.testimonial').length
+    
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    var randomNumber = getRandomInt(0, (testimonialCount ));
+    var testimonialsCollection = $('.testimonial');
+    
+    //show a random testimonial
+    $(testimonialsCollection[randomNumber]).removeClass('hidden');
+    
+   
+  
+  });
   
 </script>
