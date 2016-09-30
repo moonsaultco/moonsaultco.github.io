@@ -1,5 +1,5 @@
 
-### Revel Talent Top Companies
+### Revel Talent [Top Companies][1]
 
 Revel Talent is changing the way marketers manage their careers and how great companies find them. They help marketing professionals decide when to change jobs and help evaluate which companies are a good fit. Revel came to us with the idea to build a curated list of top companies, combining available information with research and analysis they perform.
 
