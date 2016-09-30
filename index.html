@@ -14,7 +14,9 @@ title: Moonsault Software - Software Consulting in Denver, CO
 		{% endcapture %}
 		{{ into_text | markdownify }}
 		
-		<div class="center"><a class="button" href="mailto:hello@moonsault.co">Contact Moonsault</a></p>
+		<div class="center">
+			<a class="button" href="mailto:hello@moonsault.co">Contact Moonsault</a>
+		</div>
 	</div>
 	
 	
@@ -46,7 +48,41 @@ title: Moonsault Software - Software Consulting in Denver, CO
 	
 </section>
 
+<section class="work">
+	<div class="center block">
+		<h2>Our Work</h2>
+		<div class="subhead">Some recent projects</div>
+		
+		{% capture pulse_text %}
+		  {% include_relative content/pulse.md %}
+		{% endcapture %}
+		{{ pulse_text | markdownify }}
+		
+		<a href="#" class="img-switch" data-id="pulse">
+			<img src="/img/pulse/a-home.jpeg" data-count="0">
+		</a>
+		
+		<p class="center light">(click to see more images)</p>
+		
+		{% capture revel_text %}
+		  {% include_relative content/revel.md %}
+		{% endcapture %}
+		{{ revel_text | markdownify }}
+		
+		<a href="#" class="img-switch" data-id="revel">
+			<img src="/img/revel/a-home.png" data-count="0">
+		</a>
+		
+		<p class="center light">(click to see more images)</p>
+		
 
+		
+	</div>	
+	
+	
+	
+	
+</section>
 
 
 <script src="/js/cash.min.js"></script>
@@ -55,24 +91,65 @@ title: Moonsault Software - Software Consulting in Denver, CO
   // https://github.com/kenwheeler/cash#fnafter
   
   $(function(){
+	  
+	var pulseList = ["/img/pulse/a-home.jpeg", "/img/pulse/b-guides.jpeg", "/img/pulse/c-size.jpeg", "/img/pulse/d-mobile.jpeg"],
+	revelList = ["/img/revel/a-home.png", "/img/revel/b-results.png", "/img/revel/c-details.png", "/img/revel/d-mobile.png"];
   
     $('html').addClass('dom-loaded');
-  
-  	// hide all the testimonials
-    $('.testimonial').addClass('hidden');
-    var testimonialCount = $('.testimonial').length
+    showTestimonial();
+    //$('.img-switch').on('click', bloop())
+    $('.img-switch').on('click', function(e) {
+	   // console.log($(this));
+    	switchImage($(this));
+    	e.preventDefault();
+    }); 
     
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min;
+    function switchImage(clickedNode) {
+		console.log(clickedNode);
+		//console.log($(clickedNode).children());
+		
+		var targetFlag = clickedNode.attr('data-id'),
+		thisImage = $(clickedNode).children(),
+		listIndex = thisImage.attr('data-count'),
+		nextIndex, newSrc, targetList;
+		
+		if (targetFlag == 'pulse') targetList = pulseList;
+		if (targetFlag == 'revel') targetList = revelList;
+		
+		if (targetList.length > 1) {
+			
+			nextIndex = parseInt(listIndex) + 1;
+			if (nextIndex == targetList.length) nextIndex = 0;
+			
+			newSrc = targetList[nextIndex];
+			
+			thisImage.attr('src', newSrc );
+			thisImage.attr('data-count', nextIndex );
+			
+			
+		}
+		
     }
-    
-    var randomNumber = getRandomInt(0, (testimonialCount ));
-    var testimonialsCollection = $('.testimonial');
-    
-    //show a random testimonial
-    $(testimonialsCollection[randomNumber]).removeClass('hidden');
+  
+  	function getRandomInt(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min)) + min;
+  	}
+  
+  	function showTestimonial() {
+		// hide all the testimonials
+		$('.testimonial').addClass('hidden');
+		var testimonialCount = $('.testimonial').length
+		
+		var randomNumber = getRandomInt(0, (testimonialCount ));
+		var testimonialsCollection = $('.testimonial');
+		
+		//show a random testimonial
+		$(testimonialsCollection[randomNumber]).removeClass('hidden');
+  	}
+  
+ 
     
    
   

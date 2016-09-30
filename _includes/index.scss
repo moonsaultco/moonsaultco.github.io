@@ -40,8 +40,22 @@ a {
 	}
 }
 
+h1, h2, h3 {
+	@extend .contrast-font;
+	margin: 1.3em 0 0;
+	color: #333;
+}
+
+h2 {
+	
+}
+
+h3 {
+	margin-bottom: -1em;
+}
+
 section {
-	padding: 2em 1em ;
+	padding: 3em 1em ;
 	font-size: 16px;
 }
 
@@ -71,12 +85,21 @@ section.blue {
 	}
 }
 
+.img-switch img {
+	border: 1px $lighter-text solid;
+	max-width: 100%;
+}
+
 .hidden {
 	display: none;
 }
 
 .center {
 	text-align: center;
+}
+
+.light {
+	color: $light-text;
 }
 
 .center.block {
@@ -103,10 +126,6 @@ section.blue {
 	//margin-top: 1em;
 }
 
-.testimonials {
-	
-
-}
 
 .testimonial {
 	max-width: $text-width;
@@ -141,14 +160,41 @@ section.blue {
 	}
 }
 
+.work {
+	padding-top: 0;
+	h2:first-of-type {
+		margin-top: 0;
+	}
+	.subhead {
+		margin-bottom: 1em;
+	}
+}
 
-
+.footer {
+	background-color: #333;
+	color: white;
+	padding: .25em;
+}
 
 // Tablet and larger 
 @media (min-width: 768px) {
 	
 	section {
 		font-size: percentage(22/16);
+	}
+	
+	.img-switch {
+		display: block;
+		min-height: 833px;
+	}
+	
+	.img-switch img {
+		max-width: (1200px * .75);
+		margin-left: -98px;
+	}
+	
+	.work .light {
+		font-size: 80%;
 	}
 	
 	.logo-box {
