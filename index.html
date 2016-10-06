@@ -127,9 +127,13 @@ title: Moonsault Software - Software Consulting in Denver, CO
 			//thisImage.removeClass('fade-in');
 			
 			setTimeout(function(){
-				//thisImage.addClass('fade-in');
 				thisImage.attr('src', newSrc );
 				thisImage.attr('data-count', nextIndex );
+			}, 500);
+
+			
+			setTimeout(function(){
+				//thisImage.addClass('fade-in');
 				thisImage.removeClass('fade-out');
 			}, 750);
 			
