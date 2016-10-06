@@ -32,7 +32,6 @@ a {
 	text-decoration: none;
 	transition: color 300ms ease-in;
 	&:visited {
-		//color: darken($moon-blue, 10%);
 		color: $moon-blue;
 	}
 	&:hover {
@@ -44,10 +43,6 @@ h1, h2, h3 {
 	@extend .contrast-font;
 	margin: 1.3em 0 0;
 	color: #333;
-}
-
-h2 {
-	
 }
 
 h3 {
@@ -122,11 +117,6 @@ section.blue {
 	top: 0;
 }
 
-.intro .center .button {
-	//margin-top: 1em;
-}
-
-
 .testimonial {
 	max-width: $text-width;
 	margin: auto;
@@ -144,21 +134,13 @@ section.blue {
 		color: $moon-blue;
 		opacity: .6;
 	}
-	.quote, .source {
-		//margin-left: 3.2em;
-		//border: 1px #000 solid;
-		//background-color: #efe;
-	}
 	.quote {
 		font-style: italic;
-		//color: $light-text;
 		font-size: 120%;
 	}
 	.source {
-		//@extend .contrast-font;
 		font-size: 85%;
 		margin-top: .5em;
-		//text-align: center;
 	}
 }
 
