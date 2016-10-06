@@ -135,12 +135,14 @@ section.blue {
 	padding-left: 2.5em;
 	//background-color: #fee;
 	.mark {
-		color: $lighter-text;
 		font-size: percentage(70/16);
 		//background-color: #eee;
 		position: absolute;
 		top: -.2em;
 		left: 0;
+		font-weight: bold;
+		color: $moon-blue;
+		opacity: .6;
 	}
 	.quote, .source {
 		//margin-left: 3.2em;
