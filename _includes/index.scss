@@ -27,15 +27,18 @@ p {
 }
 
 a {
-	color: $moon-blue;
 	color: lighten($moon-blue, 10%);
 	text-decoration: none;
 	transition: color 300ms ease-in;
+	border-bottom: 1px white dotted;
 	&:visited {
 		color: $moon-blue;
+		color: $light-text;
+		border-bottom: 1px $light-text dotted;
 	}
 	&:hover {
 		color: lighten($moon-blue, 20%);
+		//border-bottom: 1px lighten($moon-blue, 10%) dotted;
 	}
 }
 
