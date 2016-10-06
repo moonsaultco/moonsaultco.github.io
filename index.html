@@ -123,12 +123,18 @@ title: Moonsault Software - Software Consulting in Denver, CO
 			
 			newSrc = targetList[nextIndex];
 			
-			thisImage.attr('src', newSrc );
-			thisImage.attr('data-count', nextIndex );
+			thisImage.addClass('fade-out');
+			//thisImage.removeClass('fade-in');
 			
+			setTimeout(function(){
+				//thisImage.addClass('fade-in');
+				thisImage.attr('src', newSrc );
+				thisImage.attr('data-count', nextIndex );
+				thisImage.removeClass('fade-out');
+			}, 600);
 			
+
 		}
-		
     }
   
   	function getRandomInt(min, max) {

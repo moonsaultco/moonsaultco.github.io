@@ -176,6 +176,19 @@ section.blue {
 	padding: .5em;
 }
 
+// animations between image in work
+.work {
+	img {
+		transition: opacity ease-out 0.5s;
+		opacity: 1;
+	}
+	.fade-out {
+		opacity: 0;
+
+	}
+}
+
+
 // Tablet and larger 
 @media (min-width: 768px) {
 	
