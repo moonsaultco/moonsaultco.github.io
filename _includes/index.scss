@@ -1,5 +1,6 @@
 
 $moon-blue: #004B77;
+$moon-text: lighten($moon-blue, 10%);
 $text-color: #555;
 $light-text: #777;
 $lighter-text: #aaa;
@@ -27,20 +28,18 @@ p {
 }
 
 a {
-	color: lighten($moon-blue, 10%);
-	text-decoration: none;
-	transition: color 300ms ease-in;
-	border-bottom: 1px white dotted;
-	&:visited {
-		color: $moon-blue;
-		color: $light-text;
-		border-bottom: 1px $light-text dotted;
-	}
-	&:hover {
-		color: lighten($moon-blue, 20%);
-		//border-bottom: 1px lighten($moon-blue, 10%) dotted;
-	}
+    color: $moon-text;
+    text-decoration: none;
+    transition: color 300ms ease-in;
+    &:visited {
+        color: lighten(grayscale($moon-text), 25%);
+    }
+    &:hover {
+        color: lighten($moon-text, 20%);
+    }
 }
+
+
 
 h1, h2, h3 {
 	@extend .contrast-font;
