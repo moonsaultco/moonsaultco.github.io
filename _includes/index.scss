@@ -119,12 +119,28 @@ section.blue {
 	top: 0;
 }
 
-.testimonial {
+.testimonials {
+	height: 300px;
 	max-width: $text-width;
-	margin: auto;
+	margin: 2em auto;
 	clear: both;
 	position: relative;
+	padding: 0 1em;
+	overflow: hidden;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+
+}
+
+.testimonial {
+	position: absolute;
 	padding-left: 2.5em;
+	transition: all ease-out 0.75s;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
 	//background-color: #fee;
 	.mark {
 		font-size: percentage(70/16);
@@ -144,6 +160,27 @@ section.blue {
 		font-size: 85%;
 		margin-top: .5em;
 	}
+}
+
+// .testimonial.lynda {
+//     //margin-top: 3em;
+//     top: 25%;
+// }
+// 
+// .testimonial.aaron {
+//     //margin-top: 3em;
+//     top: 15%;
+// }
+
+
+.off-screen-right {
+	position: absolute;
+	left: 150%;
+}
+
+.off-screen-left {
+	position: absolute;
+	left: -150%;
 }
 
 .work {
@@ -181,6 +218,10 @@ section.blue {
 	section {
 		padding: 3em 1em ;
 		font-size: percentage(22/16);
+	}
+	
+	.testimonials {
+		height: 240px;
 	}
 	
 	.img-switch {

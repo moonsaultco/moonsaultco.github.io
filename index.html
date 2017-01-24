@@ -23,7 +23,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 </section>
 <section class="testimonials">
 	
-	<div class="testimonial lynda">
+	<div class="testimonial lynda ">
 		<span class="mark">“</span>
 		<div class="quote">
 			Moonsault are easy to work with. They helped us make good technology decisions and get things done quickly.
@@ -34,7 +34,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 		
 	</div>
 	
-	<div class="testimonial aaron">
+	<div class="testimonial aaron off-screen-right">
 		<span class="mark">“</span>
 		<div class="quote">
 			Moonsault was able to take our project and complete it with minimal oversight. Great to be able to just hand them stuff and know they'd get it done right and on time.
@@ -45,7 +45,18 @@ title: Moonsault Software - Software Consulting in Denver, CO
 		
 	</div>
 	
+	<div class="testimonial paul off-screen-right">
+		<span class="mark">“</span>
+		<div class="quote">
+			They're fast, flexible, and they ship great product. Creating something brand new is hard, requires lots of tweaking and direction changes. Moonsault was able to handle a fair amount of chaos and lack of process better than any developers I've ever worked with, all while helping us stay on track and build a great product.
+		</div>
+		<div class="source">
+			— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a> Director of Digital Marketing at SolarPulse 
+		</div>
+		
+	</div>
 	
+
 </section>
 
 <section class="work">
@@ -104,7 +115,9 @@ title: Moonsault Software - Software Consulting in Denver, CO
 	commList = ["/img/comm/a-home.jpeg", "/img/comm/b-about.png", "/img/comm/c-offset.png", "/img/comm/d-mobile.png"];
   
     $('html').addClass('dom-loaded');
-    showTestimonial();
+    swapIndex = 0;
+    swapTestimonials();
+    //showTestimonial();
     //$('.img-switch').on('click', bloop())
     $('.img-switch').on('click', function(e) {
 	   // console.log($(this));
@@ -150,28 +163,34 @@ title: Moonsault Software - Software Consulting in Denver, CO
 
 		}
     }
-  
-  	function getRandomInt(min, max) {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		return Math.floor(Math.random() * (max - min)) + min;
-  	}
-  
-  	function showTestimonial() {
-		// hide all the testimonials
-		$('.testimonial').addClass('hidden');
-		var testimonialCount = $('.testimonial').length
-		
-		var randomNumber = getRandomInt(0, (testimonialCount ));
-		var testimonialsCollection = $('.testimonial');
-		
-		//show a random testimonial
-		$(testimonialsCollection[randomNumber]).removeClass('hidden');
-  	}
-  
- 
     
-   
+    function swapTestimonials() {
+		var elementCollection = $('.testimonials').children();
+		//console.log("swapIndex " + swapIndex);
+		
+		// using hidden to keep the move from off-screen-left to off-screen-right
+		// from being vissible
+		$('.testimonial.hidden').removeClass('hidden');
+	
+		$(elementCollection[swapIndex]).addClass('off-screen-left');
+		var nextItem = swapIndex+1
+		if (nextItem == elementCollection.length) {nextItem = 0};
+		//console.log("nextItem " + nextItem);
+		$(elementCollection[nextItem]).removeClass('off-screen-right');
+		
+		setTimeout(function() {
+		  $('.off-screen-left').addClass('hidden');
+		  $('.off-screen-left').addClass('off-screen-right');
+		  $('.off-screen-left').removeClass('off-screen-left');
+		}, 1000);
+		
+		swapIndex++;
+		if (swapIndex == elementCollection.length) {swapIndex = 0};
+		
+		setTimeout(swapTestimonials, 7000);
+	}
+  
+  
   
   });
   
