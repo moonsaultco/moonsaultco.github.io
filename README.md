@@ -8,15 +8,14 @@
 
 ### Instructions
 
-```bash
-bundle install
-bundle exec jekyll serve
+To install:
 
-grunt # now you are watching less files and compiling javascript
+   bundle install
+   
+To run:
 
-# using autoless instead of grunt for the lazy
-autoless less css
+    bundle exec jekyll serve
 
-```
+The site runs on Jekyll.
 
 
