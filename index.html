@@ -48,7 +48,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 	<div class="testimonial paul off-screen-right">
 		<span class="mark">“</span>
 		<div class="quote">
-			They're fast, flexible, and they ship great product. Creating something brand new is hard, requires lots of tweaking and direction changes. Moonsault was able to handle a fair amount of chaos and lack of process better than any developers I've ever worked with, all while helping us stay on track and build a great product.
+			They're fast, flexible, and they ship great product. Creating something brand new is hard, requires lots of tweaking and direction changes. Moonsault was able to handle [this] better than any developers I've ever worked with, all while helping us stay on track and build a great product.
 		</div>
 		<div class="source">
 			— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a> Director of Digital Marketing at SolarPulse 
@@ -116,7 +116,10 @@ title: Moonsault Software - Software Consulting in Denver, CO
   
     $('html').addClass('dom-loaded');
     swapIndex = 0;
-    swapTestimonials();
+    swapDelay = 9000;
+    //swapTestimonials();
+    setTimeout(swapTestimonials, swapDelay);
+    
     //showTestimonial();
     //$('.img-switch').on('click', bloop())
     $('.img-switch').on('click', function(e) {
@@ -187,7 +190,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
 		swapIndex++;
 		if (swapIndex == elementCollection.length) {swapIndex = 0};
 		
-		setTimeout(swapTestimonials, 7000);
+		setTimeout(swapTestimonials, swapDelay);
 	}
   
   
