@@ -2,64 +2,62 @@
 layout: main
 title: Moonsault Software - Software Consulting in Denver, CO
 ---
-
-<section class="blue intro">
+<section class="intro">
 	
 	<div class="logo-box">
 		{% include_relative img/logo.svg %}
 	</div>
-	<div class="center block">
-		{% capture into_text %}
-		  {% include_relative content/intro.md %}
-		{% endcapture %}
-		{{ into_text | markdownify }}
-		
-		<div class="center">
-			<a class="button" href="mailto:hello@moonsault.co">Contact Moonsault</a>
-		</div>
+	<nav>
+		<a href="#work">Our Work</a>
+		<a href="#about">About Us</a>
+		<a href="#contact">Contact</a>
+	</nav>
+	<div class="text">
+		<p>We design and build data-rich applications for companies looking to quickly capture real business value and drive customer engagement.</p>
 	</div>
 	
 	
 </section>
 <section class="testimonials">
 	
-	<div class="testimonial lynda ">
-		<span class="mark">“</span>
-		<div class="quote">
-			Moonsault are easy to work with. They helped us make good technology decisions and get things done quickly.
-		</div>
-		<div class="source">
-			— <a href="https://www.linkedin.com/in/lyndacalhoun">Lynda Calhoun</a>, Digital Spark
-		</div>
-		
-	</div>
-	
-	<div class="testimonial aaron off-screen-right">
-		<span class="mark">“</span>
-		<div class="quote">
-			Moonsault was able to take our project and complete it with minimal oversight. Great to be able to just hand them stuff and know they'd get it done right and on time.
-		</div>
-		<div class="source">
-			— Aaron Rich, Engineering Manager at <a href="https://www.tendrilinc.com">Tendril</a>
+	<div class="wrap">
+		<div class="testimonial lynda ">
+			<span class="mark">“</span>
+			<div class="quote">
+				Moonsault are easy to work with. They helped us make good technology decisions and get things done quickly.
+			</div>
+			<div class="source">
+				— <a href="https://www.linkedin.com/in/lyndacalhoun">Lynda Calhoun</a>, Digital Spark
+			</div>
+			
 		</div>
 		
-	</div>
-	
-	<div class="testimonial paul off-screen-right">
-		<span class="mark">“</span>
-		<div class="quote">
-			They're fast, flexible, and they ship great product. Creating something brand new is hard, requires lots of tweaking and direction changes. Moonsault was able to handle [this] better than any developers I've ever worked with, all while helping us stay on track and build a great product.
-		</div>
-		<div class="source">
-			— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a> Director of Digital Marketing at SolarPulse 
+		<div class="testimonial aaron off-screen-right">
+			<span class="mark">“</span>
+			<div class="quote">
+				Moonsault was able to take our project and complete it with minimal oversight. Great to be able to just hand them stuff and know they'd get it done right and on time.
+			</div>
+			<div class="source">
+				— Aaron Rich, Engineering Manager at <a href="https://www.tendrilinc.com">Tendril</a>
+			</div>
+			
 		</div>
 		
+		<div class="testimonial paul off-screen-right">
+			<span class="mark">“</span>
+			<div class="quote">
+				They’re creative, have a broad skill-set, and go above and beyond. Our project included a lot of experimentation. Moonsault was able to handle everything we threw at them.
+			</div>
+			<div class="source">
+				— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a> Director of Digital Marketing at SolarPulse 
+			</div>
+			
+		</div>	
 	</div>
-	
-
 </section>
 
-<section class="work">
+
+<section id="work" class="work">
 	<div class="center block">
 		<h2>Our Work</h2>
 		<div class="subhead">Some recent projects</div>
@@ -101,6 +99,44 @@ title: Moonsault Software - Software Consulting in Denver, CO
 		</div>
 		
 	</div>	
+</section>
+
+<section id="about" class="about">
+	
+	{% capture about_text %}
+	  {% include_relative content/about.md %}
+	{% endcapture %}
+	
+	<div class="center block">
+	{{ about_text | markdownify }}
+	</div>
+	
+</section>
+
+<section id="contact">
+	
+	<div class="center block">
+		<h2>Contact Us</h2>
+	
+		Using the form below, or at <a href="mailto:hello@moonsault.co">hello@moonsault.co</a>.
+		
+		<form action="https://formspree.io/hello@moonsault.co"
+			  method="POST">
+			<label for="name">Your Name</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Your Email</label>
+			<input type="email" name="_replyto" id="email">
+			<label for="body">What can we help you with…</label>
+			<textarea name="body" id="body"></textarea>
+			<input type="hidden" name="_next" value="http://moonsault.co/thanks" />
+			<input type="text" name="_gotcha" style="display:none" />
+			<input type="submit" value="Send">
+			
+			
+		</form>
+		
+		
+	</div>
 </section>
 
 <script src="/js/cash.min.js"></script>
@@ -168,7 +204,7 @@ title: Moonsault Software - Software Consulting in Denver, CO
     }
     
     function swapTestimonials() {
-		var elementCollection = $('.testimonials').children();
+		var elementCollection = $('.testimonials .wrap').children();
 		//console.log("swapIndex " + swapIndex);
 		
 		// using hidden to keep the move from off-screen-left to off-screen-right
