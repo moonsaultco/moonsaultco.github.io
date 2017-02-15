@@ -238,10 +238,15 @@ section {
 	input[type="text"], input[type="email"], textarea {
 		border-radius: 2px;
 		color: black;
-		border: none;
+		border: 3px white solid;
+		padding: 7px;
 		width: 25em;
 		max-width: 100%;
 		font-size: 16px;
+		&:focus {
+		  border-color: lighten($moon-blue, 15%);
+		  outline: 0;
+		}
 	}
 	textarea {
 		display: block;
@@ -251,17 +256,22 @@ section {
 	input[type="submit"]{
 		background-color: white;
 		color: black;
-		border: none;
+		border: 3px white solid;
 		padding: 2px 20px 3px;
 		border-radius: 20px;
 		@extend .contrast-font;
 		font-weight: bold;
+		&:focus {
+		  border-color: lighten($moon-blue, 15%);
+		  outline: 0;
+		}
 	}
 }
 
 .footer {
-	text-align: center;
-	padding: .5em;
+	//text-align: center;
+	padding: 1em;
+	padding-top: 3em;
 }
 
 // animations between image in work
