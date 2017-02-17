@@ -343,7 +343,11 @@ section {
 	}
 	
 	.img-wrap {
-		min-height: 880px;
+		min-height: 920px;
+	}
+	
+	.img-wrap.short {
+		min-height: 660px;
 	}
 	
 	.img-switch img {
