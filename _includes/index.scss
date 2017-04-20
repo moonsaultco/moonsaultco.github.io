@@ -80,10 +80,10 @@ section {
 	.logo-box {
 		position: absolute; 
 		top: 20px;
-		left:10px;
-		width: 180px;
-		height: 45px;  
-		//margin: 0 auto .5em;
+		left:1em;
+		width: 91px;
+		height: 52px;  
+		margin: 0 auto;
 	}
 	.logo {
 		position: absolute; 
@@ -371,8 +371,8 @@ section {
 		.logo-box {
 			top: 40px;
 			left:$lrg-margin;
-			width: 300px;
-			height: 100px;  
+			width: 91px * 1.5;
+			height: 52px * 1.5;  
 			//margin: auto;
 		}
 		
