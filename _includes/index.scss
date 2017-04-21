@@ -1,6 +1,6 @@
 
 $moon-blue: #004B77;
-$moon-text: lighten($moon-blue, 10%);
+$moon-text: #2279AB;
 $text-color: #555;
 $dark-text: #333;
 $light-text: #777;
@@ -17,12 +17,12 @@ body {
 	font-family: 'Iowan Old Style', Palatino, Georgia, 'Times New Roman', Times, serif;
 	background-color: white;
 	color: $text-color;
+	font-size: 16px;
 	line-height: 1.4;
 }
 
 .contrast-font {
-	font-family: Tahoma, Verdana, Segoe, sans-serif;
-	//font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; 
+	font-family: Tahoma, Avenir, Segoe, Verdana, sans-serif;
 }
 
 p {
@@ -30,22 +30,17 @@ p {
 }
 
 a {
-    color: $dark-text;
+    color: $moon-text;
     text-decoration: none;
-    border-bottom: 1px $dark-text dotted;
-    //transition: color 300ms ease-in;
+    transition: color 300ms ease-in;
     &:visited {
-        //color: lighten(grayscale($moon-text), 25%);
-       border-color: $light-text;
+       color: $moon-blue;
     }
     &:hover {
-        //color: lighten($moon-text, 20%);
-        //border-color: $moon-blue;
-        border-bottom: 1px $moon-blue solid;
+        color: #22AB82;
+        //text-decoration: underline;
     }
 }
-
-
 
 h1, h2, h3 {
 	@extend .contrast-font;
@@ -67,7 +62,6 @@ h2 {
 
 section {
 	padding: 2em 1em ;
-	font-size: 16px;
 }
 
 .intro {
@@ -99,10 +93,57 @@ section {
 		a {
 			color: white;
 			border-bottom: none;
-			margin-left: 2em;
+			//margin-left: 2em;
 		}
 	}
-	
+}
+
+.testimonials {
+	background-color: black;
+	color: white;
+}
+
+.testimonials, .intro {
+	a {
+		color: white;
+		border-bottom: 1px white dotted;
+	}
+}
+
+.testimonials .wrap {
+	height: 150px;
+	max-width: $text-width;
+	//margin: 2em auto;
+	clear: both;
+	position: relative;
+	padding: 0 1em;
+	overflow: hidden;
+
+}
+
+.testimonial {
+	position: absolute;
+	padding-left: 2.5em;
+	transition: all ease-out 0.75s;
+	width: 100%;
+	left: 0;
+	top: 50%;
+
+	.mark {
+		font-size: percentage(60/16);
+		position: absolute;
+		top: -.2em;
+		left: 0;
+		font-weight: bold;
+	}
+	.quote {
+		font-style: italic;
+		//font-size: 120%;
+	}
+	.source {
+		font-size: percentage(14/16);
+		margin-top: .5em;
+	}
 }
 
 .button {
@@ -151,49 +192,6 @@ section {
 	margin: 0 auto;
 }
 
-
-
-.testimonials .wrap {
-	//height: 300px;
-	max-width: $text-width;
-	margin: 2em auto;
-	clear: both;
-	position: relative;
-	padding: 0 1em;
-	overflow: hidden;
-
-}
-
-.testimonial {
-	position: absolute;
-	padding-left: 2.5em;
-	transition: all ease-out 0.75s;
-	width: 100%;
-	left: 0;
-	top: 50%;
-	//transform: translateY(-50%);
-	
-	//background-color: #fee;
-	.mark {
-		font-size: percentage(70/16);
-		//background-color: #eee;
-		position: absolute;
-		top: -.2em;
-		left: 0;
-		font-weight: bold;
-		//color: $moon-blue;
-		//opacity: .6;
-	}
-	.quote {
-		font-style: italic;
-		font-size: 120%;
-	}
-	.source {
-		font-size: 85%;
-		margin-top: .5em;
-	}
-}
-
 #about {
 	background-color: #eee;
 }
@@ -209,9 +207,6 @@ section {
 }
 
 .work {
-	// h2:first-of-type {
-	// 	margin-top: 0;
-	// }
 	.subhead {
 		margin-bottom: 1em;
 	}
@@ -236,6 +231,7 @@ section {
 		margin-bottom: 2px;
 	}
 	input[type="text"], input[type="email"], textarea {
+		-webkit-appearance: none;
 		border-radius: 2px;
 		color: black;
 		border: 3px white solid;
@@ -288,39 +284,57 @@ section {
 
 // very narrow windows
 @media (max-width: 350px) {
-	.intro nav a {
-		font-size: 14px;
+	body .intro nav a {
+		margin: 0 .5em;
 	}
 }
-
 
 // mobile only
 @media (max-width: 767px) {
 
+	.mob-hide {
+		display: none;
+	}
+
 	.intro {
-		//padding-bottom: 20em;
-		min-height: 20em;
+		//padding-bottom: 0;
+		
+		nav {
+			margin-top: 40vh;
+		}
+		
+		.text {
+			p {
+				margin-bottom: 0;
+			}
+			.foo &:after {
+				content: "~~~";
+				display: block;
+				text-align: center;
+				margin-top: 1.3em;
+			}
+		}
+		
+		.text p {
+			//margin-bottom: 0;
+		}
 		
 		background-size: contain;
 		nav {
-			padding-top: 200px;
 			width: 100%;
 			text-align: center;
 			a {
 				margin: 0 1em;
-				
 			}
 		}
 	}
 	
 	.testimonials {
-		background-color: #eee;
+		//background-color: $moon-blue;
+		background-color: #002B45;
+		background-color: #232241;
 		padding: 2px 10px;
-		font-size: 80%;
-		.wrap {
-			height: 140px;
-		}
-		
+		font-size: 90%;
 	}
 	
 	.testimonial {
@@ -387,19 +401,13 @@ section {
 			position: absolute;
 			top: 50px;
 			right:$lrg-margin;
-		}
-	}
-	
-	.testimonials, .intro {
-		a {
-			color: white;
-			border-bottom: 1px white dotted;
+			a {
+				margin-left: 2em;
+			}
 		}
 	}
 	
 	.testimonials {
-		background-color: black;
-		color: white;
 		padding-top: 1px;
 		padding-bottom: 0;
 		
@@ -410,7 +418,9 @@ section {
 	}
 	
 	.testimonials .wrap {
+		font-size: 120%;
 		height: 300px;
+		margin: 2em auto;
 	}
 
 	.work {
