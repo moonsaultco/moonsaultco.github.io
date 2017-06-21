@@ -5,7 +5,8 @@ $(function(){
 var pulseList = ["/img/pulse/a-home.jpeg", "/img/pulse/e-solar.jpeg", "/img/pulse/c-size.jpeg", "/img/pulse/d-mobile.jpeg"],
 homeList = ["/img/myhome/a-explore.jpeg", "/img/myhome/b-energy.png"],
 revelList = ["/img/revel/c-details.png",  "/img/revel/b-results.png",  "/img/revel/d-mobile.png"],
-commList = ["/img/comm/a-home.jpeg", "/img/comm/b-about.png", "/img/comm/c-offset.png", "/img/comm/d-mobile.png"];
+commList = ["/img/comm/a-home.jpeg", "/img/comm/b-about.png", "/img/comm/c-offset.png", "/img/comm/d-mobile.png"],
+physicianList = ["/img/physician/physician-mobile-screens.png", "/img/physician/physician-desktop-search.png", "/img/physician/physician-desktop-results.png"];
 
 
 $('html').addClass('dom-loaded');
@@ -20,7 +21,7 @@ $('.img-switch').on('click', function(e) {
    // console.log($(this));
  	switchImage($(this));
  	e.preventDefault();
-}); 
+});
 
 function switchImage(clickedNode) {
  	//console.log(clickedNode);
@@ -35,6 +36,7 @@ function switchImage(clickedNode) {
  	if (targetFlag == 'pulse') targetList = pulseList;
  	if (targetFlag == 'revel') targetList = revelList;
  	if (targetFlag == 'comm') targetList = commList;
+  if (targetFlag == 'physician') targetList = physicianList;
 
 
  	if (targetList.length > 1) {

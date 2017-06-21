@@ -3,7 +3,7 @@ layout: main
 title: Moonsault Software - Software Consulting in Denver, CO
 ---
 <section class="intro">
-	
+
 	<div class="logo-box">
 		{% include_relative img/logo.svg %}
 	</div>
@@ -15,11 +15,11 @@ title: Moonsault Software - Software Consulting in Denver, CO
 	<div class="text">
 		<p>We design and build data-rich applications for companies looking to quickly capture real business value and drive customer engagement.</p>
 	</div>
-	
-	
+
+
 </section>
 <section class="testimonials">
-	
+
 	<div class="wrap">
 		<div class="testimonial lynda ">
 			<span class="mark">“</span>
@@ -29,9 +29,9 @@ title: Moonsault Software - Software Consulting in Denver, CO
 			<div class="source">
 				— <a href="https://www.linkedin.com/in/lyndacalhoun">Lynda Calhoun</a>, Digital Spark
 			</div>
-			
+
 		</div>
-		
+
 		<div class="testimonial aaron off-screen-right">
 			<span class="mark">“</span>
 			<div class="quote">
@@ -40,19 +40,19 @@ title: Moonsault Software - Software Consulting in Denver, CO
 			<div class="source">
 				— <a href="https://www.linkedin.com/in/aaron-rich-5ba88114/">Aaron Rich</a>, <span class="mob-hide">Engineering Manager at</span> Tendril
 			</div>
-			
+
 		</div>
-		
+
 		<div class="testimonial paul off-screen-right">
 			<span class="mark">“</span>
 			<div class="quote">
 				They’re creative, have a broad skill-set, and go above and beyond. Our project included a lot of experimentation. Moonsault was able to handle everything we threw at them.
 			</div>
 			<div class="source">
-				— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a>, <span class="mob-hide">Director of Digital Marketing at</span> SolarPulse 
+				— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a>, <span class="mob-hide">Director of Digital Marketing at</span> SolarPulse
 			</div>
-			
-		</div>	
+
+		</div>
 	</div>
 </section>
 
@@ -61,24 +61,28 @@ title: Moonsault Software - Software Consulting in Denver, CO
 	<div class="center block">
 		<h2>Our Work</h2>
 		<div class="subhead">Some recent projects</div>
-		
+
 		{% capture myhome_text %}
 		  {% include_relative content/myhome.md %}
 		{% endcapture %}
+		<div id="myhome"></div>
 		{{ myhome_text | markdownify }}
-		
+
 		<div class="img-wrap short">
 			<a href="#" class="img-switch" data-id="myhome">
 				<img src="/img/myhome/a-explore.jpeg" data-count="0">
 			</a>
 			<p class="center light">(click to see more images)</p>
 		</div>
-		
+
+		<hr>
+
 		{% capture pulse_text %}
 		  {% include_relative content/pulse.md %}
 		{% endcapture %}
+		<div id="pulse"></div>
 		{{ pulse_text | markdownify }}
-		
+
 		<div class="img-wrap">
 			<a href="#" class="img-switch" data-id="pulse">
 				<img src="/img/pulse/a-home.jpeg" data-count="0">
@@ -86,52 +90,73 @@ title: Moonsault Software - Software Consulting in Denver, CO
 			<p class="center light">(click to see more images)</p>
 		</div>
 
+		<hr>
+
 		{% capture comm_text %}
 		  {% include_relative content/community.md %}
 		{% endcapture %}
+		<div id="community-solar"></div>
 		{{ comm_text | markdownify }}
-		
+
 		<div class="img-wrap">
 			<a href="#" class="img-switch" data-id="comm">
 				<img src="/img/comm/a-home.jpeg" data-count="0">
 			</a>
 			<p class="center light">(click to see more images)</p>
 		</div>
-		
+
+		<hr>
+
 		{% capture revel_text %}
 		  {% include_relative content/revel.md %}
 		{% endcapture %}
+		<div id="revel"></div>
 		{{ revel_text | markdownify }}
-		
+
 		<div class="img-wrap">
 			<a href="#" class="img-switch" data-id="revel">
 				<img src="/img/revel/c-details.png" data-count="0">
 			</a>
 			<p class="center light">(click to see more images)</p>
 		</div>
-		
-	</div>	
+
+		<hr>
+
+		{% capture hcp_text %}
+		  {% include_relative content/hcp.md %}
+		{% endcapture %}
+		<div id="physician"></div>
+		{{ hcp_text | markdownify }}
+
+		<div class="img-wrap">
+			<a href="#" class="img-switch" data-id="physician">
+				<img src="/img/physician/physician-mobile-screens.png" data-count="0">
+			</a>
+			<p class="center light">(click to see more images)</p>
+		</div>
+
+	</div>
 </section>
 
 <section id="about" class="about">
-	
+
 	{% capture about_text %}
 	  {% include_relative content/about.md %}
 	{% endcapture %}
-	
+
 	<div class="center block">
 	{{ about_text | markdownify }}
 	</div>
-	
+
 </section>
 
 <section id="contact">
-	
+
 	<div class="center block">
 		<h2>Contact Us</h2>
-	
+
 		Using the form below, or at <a href="mailto:hello@moonsault.co">hello@moonsault.co</a>.
-		
+
 		<form action="https://formspree.io/hello@moonsault.co"
 			  method="POST">
 			<label for="name">Your Name</label>
@@ -143,18 +168,18 @@ title: Moonsault Software - Software Consulting in Denver, CO
 			<input type="hidden" name="_next" value="http://moonsault.co/thanks" />
 			<input type="text" name="_gotcha" style="display:none" />
 			<input type="submit" value="Send">
-			
-			
+
+
 		</form>
-		
-		
+
+
 	</div>
 </section>
 
 <script src="/js/cash.min.js"></script>
 
 <script>
-  
+
   {% include index.js %}
-   
+
 </script>
