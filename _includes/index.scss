@@ -258,8 +258,9 @@ section {
 #contact, .footer {
 	background-color: black;
 	color: white;
-	h2 {
+	h2, h3 {
 		color: white;
+		margin-top: 0;
 	}
 	a {
 		color: white;

@@ -35,7 +35,13 @@ Moonsault UX is lead by John Phillips, an interaction designer with over 15 year
 
 {% endcomment %}
 
+{% capture text_3 %}
 
+### Contact Us
+
+Using the form below, or at <ux@moonsault.co> 
+
+{% endcapture %}
 
 <section class="header">
 	{% include header.html %}
@@ -81,6 +87,26 @@ Moonsault UX is lead by John Phillips, an interaction designer with over 15 year
 		<div class="services">
 			{{ text_2 | markdownify }}
 		</div>
+	</div>
+</section>
+
+<section id="contact">
+
+	<div class="center block">
+		
+		{{ text_3 | markdownify }}
+		
+		<form action="//flipmail.co/api/mxWocdsGsRaqBFG45BDd" method="post">
+			<label for="name">Your Name</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Your Email</label>
+			<input type="email" name="email"> 
+			<label for="body">What can we help you with…</label>
+			<textarea name="message"></textarea> 
+			<input type="hidden" name="_after" value="http://moonsault.co/thanks" />
+			<input type="text" name="_honey" value="" style="display:none">
+			<input type="submit" value="Send">
+		</form>
 	</div>
 </section>
 
