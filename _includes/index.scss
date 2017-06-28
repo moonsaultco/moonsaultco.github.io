@@ -5,7 +5,9 @@ $text-color: #555;
 $dark-text: #333;
 $light-text: #777;
 $lighter-text: #aaa;
+$gray-bg: #eee;
 $text-width: 32em;
+
 
 * {
 	-webkit-box-sizing: border-box;
@@ -56,45 +58,62 @@ h2 {
 	margin-top: 0;
 }
 
+ul {
+	margin-left: 0;
+	padding-left: 1.4em;
+}
+
+strong {
+	color: $dark-text;
+}
+
 .white {
 	color: white;
 }
 
 section {
 	padding: 2em 1em ;
+	&.no-top {
+		padding-top: 0;
+	}
 }
 
-.intro {
+.intro, .header {
 	background-color: black;
 	color: white;
 	background-image: url('/img/night-trees.jpg');
 	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 	
 	.logo-box {
 		position: absolute; 
-		top: 20px;
-		left:1em;
+		top:  20px;
+		left: 1em;
 		width: 91px;
 		height: 52px;  
-		margin: 0 auto;
+		a {
+			border: none;
+		}
 	}
-	.logo {
-		position: absolute; 
-		height: 100%; 
-		width: 100%; 
-		left: 0; 
-		top: 0;
-	}
+
 	
 	nav {
 		@extend .contrast-font;
-		font-weight: bold;
+		//font-weight: bold;
 		a {
 			color: white;
 			border-bottom: none;
 			//margin-left: 2em;
 		}
+	}
+}
+
+.header {
+	background-image: url('/img/starry-sky.jpg');
+	h1 {
+		color: white;
+		text-align: center;
 	}
 }
 
@@ -146,6 +165,30 @@ section {
 	}
 }
 
+.recommendation {
+	display: flex;
+	background-color: $gray-bg;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 8px;
+	p {
+		margin-bottom: 0;
+	}
+	.from {
+		img {
+			border-radius: 50%;
+		}
+		.name {
+			font-size: percentage(12/16);
+			color: $dark-text;
+			text-align: center;
+		}
+	}
+	.text {
+		padding-left: 1.5em;
+	}
+}
+
 .button {
 	@extend .contrast-font;
 	font-weight: bold;
@@ -193,7 +236,7 @@ section {
 }
 
 #about {
-	background-color: #eee;
+	background-color: $gray-bg;
 }
 
 .off-screen-right {
@@ -282,10 +325,11 @@ section {
 	}
 }
 
-// very narrow windows
-@media (max-width: 350px) {
-	body .intro nav a {
-		margin: 0 .5em;
+.ux {
+	.services {
+		h3 {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -296,14 +340,35 @@ section {
 		display: none;
 	}
 
-	.intro {
-		//padding-bottom: 0;
+	nav {
+		width: 100%;
+		position: absolute;
+		top: .5em;
+		left: 0;
+		font-size: percentage(13/16);
 		
-		nav {
-			margin-top: 40vh;
+		text-align: center;
+		a {
+			margin: 0 .5em;
+			white-space: nowrap;
 		}
-		
+	}
+	
+	.intro, .header {
+		.logo-box {
+			position: static;
+			margin: .5em auto;
+		}
+	}
+	
+	.header h1 {
+		margin-top: .5em;
+	}
+
+	.intro {
+		background-size: contain;
 		.text {
+			margin-top: 20vh;
 			p {
 				margin-bottom: 0;
 			}
@@ -312,19 +377,6 @@ section {
 				display: block;
 				text-align: center;
 				margin-top: 1.3em;
-			}
-		}
-		
-		.text p {
-			//margin-bottom: 0;
-		}
-		
-		background-size: contain;
-		nav {
-			width: 100%;
-			text-align: center;
-			a {
-				margin: 0 1em;
 			}
 		}
 	}
@@ -340,6 +392,28 @@ section {
 	
 	.testimonial {
 		transform: translateY(-50%);
+	}
+	
+	.ux {
+		h2 {
+			font-size: percentage(20/16);
+		}
+	}
+	
+	.recommendation {
+
+		.from {
+			img {
+				width: 60px;
+			}
+			.name {
+
+			}
+		}
+		.text {
+			font-size: percentage(14/16);
+			padding-left: 1em;
+		}
 	}
 	
 }
@@ -376,26 +450,17 @@ section {
 	
 	$lrg-margin: 5%;
 	
-	
-	.intro {
-		height: 0;
-		padding-top: percentage(1800/3200);
-		background-size: cover;
-
-		
+	.intro, .header {
 		.logo-box {
 			top: 40px;
 			left:$lrg-margin;
 			width: 91px * 1.5;
 			height: 52px * 1.5;  
 			//margin: auto;
-		}
-		
-		.text {
-			position: absolute;
-			top: 150px;
-			left: $lrg-margin;
-			width: $text-width;
+			.logo {
+				width: 91px * 1.5;
+				height: 52px * 1.5;  
+			}
 		}
 		
 		nav {
@@ -406,6 +471,19 @@ section {
 				margin-left: 2em;
 			}
 		}
+	}
+	
+	.intro {
+		height: 0;
+		padding-top: percentage(1800/3200);
+
+		.text {
+			position: absolute;
+			top: 150px;
+			left: $lrg-margin;
+			width: $text-width;
+		}
+		
 	}
 	
 	.testimonials {
@@ -426,6 +504,12 @@ section {
 
 	.work {
 		padding-top: 0;
+	}
+	
+	.top {
+		h2 {
+			margin: 0 -2em;
+		}
 	}
 
 }
