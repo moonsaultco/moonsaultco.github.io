@@ -1,3 +1,5 @@
 # Build settings
 markdown: kramdown
 exclude: [.gitignore, _site, README.markdown, package.json, grunt.js, Gruntfile.coffee, node_modules, .git, .vagrant, less]
+paginate: 20
+gems: [jekyll-paginate]

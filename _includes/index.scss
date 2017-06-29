@@ -333,6 +333,10 @@ section {
 	}
 }
 
+.head-image img, .post img {
+	max-width: 100%;
+}
+
 
 // mobile only
 @media (max-width: 767px) {
@@ -523,10 +527,8 @@ section {
 		}
 	}
 	
-	.thanks {
-		.header {
-			min-height: 160px;
-		}
+	.thanks .header, .blog.header{
+		min-height: 160px;
 	}
 
 }
