@@ -311,7 +311,6 @@ section {
 .footer {
 	//text-align: center;
 	padding: 1em;
-	padding-top: 3em;
 }
 
 // animations between image in work
@@ -333,6 +332,7 @@ section {
 		}
 	}
 }
+
 
 // mobile only
 @media (max-width: 767px) {
@@ -414,6 +414,16 @@ section {
 		.text {
 			font-size: percentage(14/16);
 			padding-left: 1em;
+		}
+	}
+	
+	.thanks {
+		
+		h2 {
+			font-size: percentage(22/16);
+		}
+		.giphy {
+			margin: 1em 0;
 		}
 	}
 	
@@ -510,6 +520,12 @@ section {
 	.top {
 		h2 {
 			margin: 0 -2em;
+		}
+	}
+	
+	.thanks {
+		.header {
+			min-height: 160px;
 		}
 	}
 
