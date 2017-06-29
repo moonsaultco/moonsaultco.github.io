@@ -485,9 +485,9 @@ section {
 	}
 	
 	.intro {
-		height: 0;
-		padding-top: percentage(1800/3200);
-
+		min-height: 66vh;
+		background-position: bottom center;
+	
 		.text {
 			position: absolute;
 			top: 150px;
