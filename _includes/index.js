@@ -6,7 +6,7 @@ var pulseList = ["/img/pulse/a-home.jpeg", "/img/pulse/e-solar.jpeg", "/img/puls
 homeList = ["/img/myhome/a-explore.jpeg", "/img/myhome/b-energy.png"],
 revelList = ["/img/revel/c-details.png",  "/img/revel/b-results.png",  "/img/revel/d-mobile.png"],
 commList = ["/img/comm/a-home.jpeg", "/img/comm/b-about.png", "/img/comm/c-offset.png", "/img/comm/d-mobile.png"],
-physicianList = ["/img/physician/physician-mobile-screens.png", "/img/physician/physician-desktop-search.png", "/img/physician/physician-desktop-results.png"];
+physicianList = ["/img/physician/phys-loc-mob.jpg", "/img/physician/phys-loc-search.jpg", "/img/physician/phys-loc-results.png", "/img/physician/phys-loc-details.jpg", "/img/physician/phys-loc-cart.png" ];
 
 
 $('html').addClass('dom-loaded');
