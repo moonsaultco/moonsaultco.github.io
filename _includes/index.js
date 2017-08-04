@@ -36,7 +36,7 @@ function switchImage(clickedNode) {
  	if (targetFlag == 'pulse') targetList = pulseList;
  	if (targetFlag == 'revel') targetList = revelList;
  	if (targetFlag == 'comm') targetList = commList;
-  if (targetFlag == 'physician') targetList = physicianList;
+	if (targetFlag == 'physician') targetList = physicianList;
 
 
  	if (targetList.length > 1) {
