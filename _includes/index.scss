@@ -57,7 +57,7 @@ h3 {
 h2 {
 	margin-top: 0;
 }
-.home h2 {
+.home h2, h1, #contact h3 {
 	text-transform: uppercase;
 }
 
@@ -335,9 +335,17 @@ section {
 			margin-bottom: 0;
 		}
 	}
+	.latest-post .title {
+		@extend .contrast-font;
+		color: $dark-text;
+		font-weight: bold;
+		font-size: percentage(12/16);
+		text-transform: uppercase;
+	}
 	.post-link{
 		h4 {
-			margin: 1.5em 0 0;
+			font-size: percentage(20/16);
+			margin: 0;
 		}
 		p {
 			margin-top: 0;
