@@ -1,0 +1,36 @@
+---
+layout: main
+---
+
+<section class="header">
+	{% include header.html %}
+
+	<h1>Moonsault UX</h1>
+</section>
+
+<section class="top">
+	<div class="center block">
+		{{ content }}
+	</div>
+</section>
+
+<section id="contact">
+	<div class="center block">
+
+		<h3>Contact</h3>
+		
+		<p>Using the form below, or at <a href="mailto:ux@moonsault.co">ux@moonsault.co</a></p>
+
+		<form action="//flipmail.co/api/mxWocdsGsRaqBFG45BDd" method="post">
+			<label for="name">Your Name</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Your Email</label>
+			<input type="email" name="email"> 
+			<label for="body">What can we help you with…</label>
+			<textarea name="message"></textarea> 
+			<input type="hidden" name="_after" value="http://moonsault.co/thanks" />
+			<input type="text" name="_honey" value="" style="display:none">
+			<input type="submit" value="Send">
+		</form>
+	</div>
+</section>
