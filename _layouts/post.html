@@ -4,6 +4,8 @@ pageName: blog-post
 ---
 <section class="header blog">
   {% include header.html %}
+  
+  <h1>Moonsault Blog</h1>
 
 </section>
 
@@ -17,9 +19,9 @@ pageName: blog-post
       </div>
     {% endif %}
     <div class="wrap">
-        <h1 itemprop="name">{{page.title}}</h1>
+        <h2 itemprop="name">{{page.title}}</h2>
         {% if page.subtitle %}
-          <h2>{{page.subtitle}}</h2>
+          <h3>{{page.subtitle}}</h3>
         {% endif%}
         
         {% if page.author %}

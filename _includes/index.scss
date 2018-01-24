@@ -79,6 +79,9 @@ section {
 	&.no-top {
 		padding-top: 0;
 	}
+	&.post {
+		min-height: 73vh;
+	}
 }
 
 .intro, .header {
@@ -451,6 +454,10 @@ section {
 		.giphy {
 			margin: 1em 0;
 		}
+	}
+	
+	.post-meta {
+		display: block;
 	}
 	
 }
