@@ -393,7 +393,7 @@ section {
 	.intro {
 		background-size: contain;
 		.text {
-			margin: 20vh auto 0;
+			margin: 3em auto 0;
 			max-width: $text-width;
 			p {
 				margin-bottom: 0;
@@ -531,14 +531,12 @@ section {
 	.intro {
 		min-height: 40vw;
 		max-height: 60vh;
-		background-position: bottom center;
+		//background-position: bottom center;
 	
 		.text {
-			position: absolute;
-			top: 150px;
-			left: $lrg-margin;
 			width: $text-width;
-			margin: 0;
+			margin: 7em auto 0;
+			
 		}
 		
 	}
