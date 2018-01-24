@@ -579,3 +579,11 @@ section {
 	}
 
 }
+
+
+@media (min-width: 1024px) {
+	.intro {
+		min-height: 45vw;
+		background-position: bottom center;
+	}
+}
