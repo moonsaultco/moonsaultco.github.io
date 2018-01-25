@@ -360,6 +360,19 @@ section {
 	
 }
 
+.post-intro {
+	margin-bottom: 1.3em;
+}
+
+.post-meta {
+	color: $light-text;
+	margin-bottom: .5em;
+}
+
+.excerpt p {
+	margin: 0;
+}
+
 .head-image img, .post img {
 	max-width: 100%;
 }
@@ -460,9 +473,6 @@ section {
 		}
 	}
 	
-	.post-meta {
-		display: block;
-	}
 	
 }
 

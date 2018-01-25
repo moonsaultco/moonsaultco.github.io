@@ -4,16 +4,22 @@ title: Recent Posts
 pageName: blog
 ---
 
-  {% for post in site.posts %}
-    <div style="margin-bottom: .5em">
-      
-      <strong>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </strong>
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
+{% for post in site.posts %}
+  <div class="post-intro">
+    
+    <strong>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </strong>
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <div class="post-meta">{{ post.date | date: date_format }} by {{post.author}}</div>
 
+    <div class="excerpt">
+      {{post.excerpt}}
     </div>
-  {% endfor %}
+    
+    <a class="" href="{{ post.url | relative_url }}">continue reading…</a>
+
+  </div>
+{% endfor %}
 
 
