@@ -12,6 +12,8 @@ I wanted to illustrate how to use AWS Lambda on a single page “app” with no 
 [Demo](http://twilio-instagram-lambda.s3-website-us-east-1.amazonaws.com/)  
 [Code](https://github.com/chadbaudoin/lambda-twilio/blob/master/index.html)
 
+## THIS IS OUT OF DATE, DON'T USE
+
 ### The Idea
 * Single page with form
 * Enter a tag and a phone number
