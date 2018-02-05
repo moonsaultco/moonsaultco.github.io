@@ -23,7 +23,7 @@ This app is broken into two major pieces. First is the [indexing](#indexing) of 
 ## Good to know
 When indexing faces AWS Rekognition you must first create a collection. A collection is just a logical bucket to store faces. In our case, each Instagram user who logs in get a new collection created for them.
 
-AWS Rekognition doesn't store the media your are indexing, that's up to you. When you index a piece of media you can pass Rekognition an `ExternalID`, which is a reference on how to find your media. In our case, the `ExternalID` will refer to the Instagram media id, so we can recall it from Instagram.
+AWS Rekognition doesn't store the media you are indexing, that's up to you. When you index a piece of media you can pass Rekognition an `ExternalID`, which is a reference on how to find your media. In our case, the `ExternalID` will refer to the Instagram media id, so we can recall it from Instagram.
 
 One misconception I had going into this exercise is that I could say `Me = This Face` and I could just search for `Me`. That's not how Rekognition works. If you want that functionality you have to roll it yourself for right now. How it actually works is each face is indexed on each photo and assigned a `FaceID`. That `FaceID` can be searched against your collection with a certain percentage of certainty.
 
@@ -83,13 +83,13 @@ After that piece is done, it's on to recall and facial search.
 
 ## <a name="recall"></a> Searching By Face
 
-There are two ways in Rekognition to search for face. By a `FaceID` which is assigned to a face on each individual photo and by photo.
+In Rekognition there are two ways  to search for a face. You can search by a `FaceID` or by photo. A `FaceID`  is assigned to a face on each individual photo.
 
 ### Browsing
 
 The way I implemented browsing faces is by searching for a max of 1000 faces in a user's collection and calling `rekognition.listFaces(params, callback)`. Then from there choosing a random 50 faces to display the user.
 
-Any face is clickable because each face, when indexed gets a `FaceId`. You can take a `FaceId` and feed it to `rekognition.searchFaces(params, callbac)` to find similar faces.
+Any face is clickable,  because each indexed face gets a `FaceId`. You can take a `FaceId` and feed it to `rekognition.searchFaces(params, callbac)` to find similar faces.
 
 ### Photo Search
 
