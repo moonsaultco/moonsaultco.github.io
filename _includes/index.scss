@@ -8,6 +8,7 @@ $light-text: #888;
 $lighter-text: #aaa;
 $gray-bg: #eee;
 $text-width: 700px;
+$base-family: Avenir, "Segoe UI", "Trebuchet MS", "Tahoma", sans-serif;
 
 
 * {
@@ -18,7 +19,7 @@ $text-width: 700px;
 
 body {
 	//font-family: 'Iowan Old Style', Palatino, Georgia, 'Times New Roman', Times, serif;
-	font-family: Avenir, "Segoe UI", "Trebuchet MS", "Tahoma", sans-serif;
+	font-family: $base-family;
 	background-color: white;
 	color: $text-color;
 	font-size: 16px;
@@ -26,7 +27,9 @@ body {
 }
 
 .contrast-font {
-	font-family: Avenir, "Segoe UI", "Trebuchet MS", "Tahoma", sans-serif;
+	font-family: 'Arial Black', AvenirNext-Heavy, sans-serif;
+	//font-family: Baskerville, Constantia, Palatino, Georgia, serif
+	//font-family: Avenir, "Segoe UI", "Trebuchet MS", "Tahoma", sans-serif;
 	//font-family: 'Iowan Old Style', Palatino, Cambria, Georgia, serif;
 	//font-family: Tahoma, Avenir, Segoe, Verdana, sans-serif;
 	//font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -132,7 +135,7 @@ figure {
 
 	
 	nav {
-		@extend .contrast-font;
+		//@extend .contrast-font;
 		text-transform: uppercase;
 		text-align: center;
 		padding-top: 20px;
@@ -244,7 +247,7 @@ figure {
 }
 
 .button {
-	@extend .contrast-font;
+	//@extend .contrast-font;
 	font-weight: bold;
 	display: inline-block;
 	text-decoration: none;
@@ -352,7 +355,7 @@ figure {
 		border: 3px white solid;
 		padding: 2px 20px 3px;
 		border-radius: 20px;
-		@extend .contrast-font;
+		//@extend .contrast-font;
 		font-weight: bold;
 		&:focus {
 		  border-color: lighten($moon-blue, 15%);
@@ -364,7 +367,7 @@ figure {
 .footer {
 	background-color: black;
 	color: white;
-	@extend .contrast-font;
+	//@extend .contrast-font;
 	font-size: 120%;
 	text-align: center;
 	padding: 1em;
@@ -413,18 +416,22 @@ figure {
 
 .post-intro {
 	margin-bottom: 1.3em;
-	strong {
-		font-size: 110%;
-	}
 }
 
-.post-meta, .author {
+
+.post-meta, .author, .recent-posts {
 	color: $light-text;
 }
 
 .post-meta {
 	margin-bottom: .5em;
 }
+
+ .recent-posts {
+	 text-transform: uppercase;
+	 font-size: 80%;
+	 margin-bottom: -1.6em;
+ }
 
 .excerpt p {
 	margin: 0;
@@ -447,6 +454,9 @@ h3.subtitle {
 	blockquote {
 		font-size: 105%;
 	}
+	
+	h2 { font-size: percentage(22/16) }
+	h3 { font-size: percentage(18/16) }
 	
 	.mob-hide {
 		display: none;
@@ -557,6 +567,9 @@ h3.subtitle {
 		padding: 3em 1em ;
 		font-size: percentage(22/16);
 	}
+	
+	h2 { font-size: percentage(32/22) }
+	h3 { font-size: percentage(28/22) }
 
 	.img-switch {
 		display: block;

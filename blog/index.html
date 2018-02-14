@@ -1,25 +1,35 @@
 ---
-layout: post
-title: Recent Posts
+layout: main
+title: Moonsault Blog
 pageName: blog
 ---
+<section class="header blog">
+  {% include header.html %}
 
-{% for post in site.posts %}
-  <div class="post-intro">
-    
-    <strong>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </strong>
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <div class="post-meta">{{ post.date | date: date_format }} by {{post.author}}</div>
+  <h1>Moonsault Blog</h1>
 
-    <div class="excerpt">
-      {{ post.content | strip_html | truncatewords: 50 }} <a class="" href="{{ post.url | relative_url }}">keep reading</a>
+</section>
+
+<section class="blog list">
+  <div class="center block">
+    <h2 class="recent-posts">Recent Posts:</h2>
+    {% for post in site.posts %}
+    <div class="post-intro">
+  
+      <h3 class="post-title">
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <div class="post-meta">{{ post.date | date: date_format }} by {{post.author}}</div>
+  
+      <div class="excerpt">
+        {{ post.content | strip_html | truncatewords: 50 }} <a class="" href="{{ post.url | relative_url }}">keep reading</a>
+      </div>
+
     </div>
-    
-    
-
+    {% endfor %}
   </div>
-{% endfor %}
+
+</section>
 
 
