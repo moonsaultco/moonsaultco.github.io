@@ -5,6 +5,7 @@ exclude: [.gitignore, _site, README.markdown, package.json, grunt.js, Gruntfile.
 paginate: 20
 url: https://moonsault.co
 permalink: /:year/:month/:day/:title
+description: "Software Consulting in Denver, CO. We focus on rapid, high quality delivery and excellent communication."
 gems: [jekyll-paginate]
 kramdown:
   input: GFM
