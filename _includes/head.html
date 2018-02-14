@@ -15,10 +15,13 @@
 	  	{{ include_to_scssify | scssify }}
 	</style>
 
-	<link rel="canonical" href="{{site.url}}{{ page.url | replace:'index.html','' | replace:'.html', '' }}" />
+	{% capture canonical_url %}{{site.url}}{{ page.url | replace:'index.html','' | replace:'.html', '' }}{% endcapture %}
+	{% if page.canonical %}
+	  {% assign canonical_url = page.canonical %}
+	{% endif %}
+	<link rel="canonical" href="{{canonical_url}}" />
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180.png?v=2">
 	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=2">
-	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png?v=3">
-
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png?v=3">	
 </head>
