@@ -37,6 +37,11 @@ pageName: blog-post
         <div itemprop="articleBody" class="post-content">
         {{ content }}
         </div>
+                
+        {% if page.canonical %}
+          <p>Originally published at <a href="{{page.canonical}}">{{page.canonical | remove_first: "http://" | remove_first: "https://"}}</a></p>
+        {% endif %}
+        
   
 
     </div>

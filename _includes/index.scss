@@ -4,7 +4,7 @@ $moon-text: #2279AB;
 $link-hover: #22AB82;
 $text-color: #555;
 $dark-text: #333;
-$light-text: #777;
+$light-text: #888;
 $lighter-text: #aaa;
 $gray-bg: #eee;
 $text-width: 700px;
@@ -71,6 +71,13 @@ h2 {
 ul {
 	margin-left: 0;
 	padding-left: 1.4em;
+}
+
+blockquote {
+	margin: 1em 0;
+	color: $light-text;
+	font-style: italic;
+	font-size: 120%;
 }
 
 strong {
@@ -437,7 +444,10 @@ h3.subtitle {
 
 // mobile only
 @media (max-width: 767px) {
-
+	blockquote {
+		font-size: 105%;
+	}
+	
 	.mob-hide {
 		display: none;
 	}
@@ -625,6 +635,10 @@ h3.subtitle {
 
 
 @media (min-width: 1024px) {
+	blockquote {
+		margin: 1em -2em;
+	}
+	
 	.intro {
 		min-height: 45vw;
 		//background-position: bottom center;
