@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "Using AWS Rekognition to Search Instagram Posts by Photo"
+longTitle:  true
 date:       2018-02-05 12:00:00
 author:     "Chad Baudoin"
 headImage: '![using faces to search your Instagram posts](/img/blog/2018-02-05/faces.jpg "face search")'

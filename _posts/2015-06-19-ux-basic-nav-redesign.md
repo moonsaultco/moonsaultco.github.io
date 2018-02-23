@@ -16,7 +16,7 @@ Nothing fancy about the work we did, really just the blocking and tackling of UX
 
 <blockquote>
 
-	<h3>“The blocking and tackling of UX work”</h3>
+	“The blocking and tackling of UX work”
 
 </blockquote>
 

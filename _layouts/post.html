@@ -4,40 +4,35 @@ pageName: blog-post
 ---
 <section class="header blog">
   {% include header.html %}
-  
   <h1><a href="/blog/">Moonsault Blog</a></h1>
-
 </section>
 
 <section class="post" itemscope itemtype="http://schema.org/Article">
-  
-  <div class="center block">
+  <div class="center block {% if page.headImage %}wide{% endif %}">
     
     {% if page.headImage %}
-      <div class="head-image">
-          {{ page.headImage | markdownify }}
-      </div>
-    {% endif %}
-    <div class="wrap">
-        <h2 itemprop="name">{{page.title}}</h2>
-        {% if page.subtitle %}
-          <h3 class="subtitle">{{page.subtitle}}</h3>
-        {% endif%}
-        
-        {% if page.author %}
-        <p class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          by
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">{{ page.author }}</span>
-          </span> on
-          <span itemprop="datePublished" content="{{ page.date | date: "%F" }}" class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
-        </p>
-        {% endif%}
-  
-        <div itemprop="articleBody" class="post-content">
-        {{ content }}
-        </div>
-                
+    <div class="head-image">
+        {{ page.headImage | markdownify }}
     </div>
-  </div>
+    {% endif %}
+    <h2 itemprop="name" class="{% if page.longTitle %}wrap{% endif %}">{{page.title}}</h2>
+    {% if page.subtitle %}<h3 class="subtitle">{{page.subtitle}}</h3>{% endif%}
+        
+    {% if page.author %}
+        {% if page.author == 'Chad Baudoin'%}{% assign email = "chad@moonsault.co" %}{% endif%}
+        {% if page.author == 'John Phillips'%}{% assign email = "john@moonsault.co" %}{% endif%}
+        {% if page.author == 'Travis Nelson'%}{% assign email = "travis@moonsault.co" %}{% endif%}  
+    <p class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      by
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        {% if email %}<a href="mailto:{{email}}">{% endif%}<span itemprop="name">{{ page.author }}</span>{% if email %}</a>{% endif%}
+      </span> on
+      <span itemprop="datePublished" content="{{ page.date | date: "%F" }}" class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
+    </p>
+    {% endif%}
+    </div>
+  
+      <div itemprop="articleBody" class="post-content center block">
+      {{ content }}
+      </div>        
 </section>
