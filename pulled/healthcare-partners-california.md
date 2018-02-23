@@ -1,6 +1,6 @@
 ---
 ordinal: 6
-layout:     work-layout
+layout:     main
 title:      "HeathCare Partners"
 subtitle:   "Provider Locator"
 showOnHome: false

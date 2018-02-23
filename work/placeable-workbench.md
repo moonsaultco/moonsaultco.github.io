@@ -1,6 +1,6 @@
 ---
 ordinal: 2
-layout:     work-layout
+layout:    main
 title:      "Placeable"
 subtitle:   "Workbench"
 screenshots:

@@ -1,6 +1,6 @@
 ---
 ordinal: 5
-layout:     work-layout
+layout:     main
 title:      "Tendril"
 subtitle:   "Landing Page Testing"
 showOnHome: false

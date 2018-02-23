@@ -1,6 +1,6 @@
 ---
 ordinal: 4
-layout:     work-layout
+layout:     main
 title:      "Tendril"
 subtitle:   "Home and Market Consumption Tool"
 showOnHome: true

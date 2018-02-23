@@ -1,6 +1,6 @@
 ---
 ordinal: 3
-layout:     work-layout
+layout:     main
 title:      "Revel Talent"
 subtitle:   "Top Companies"
 primary-screenshots:

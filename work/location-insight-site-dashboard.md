@@ -1,6 +1,6 @@
 ---
 ordinal: 1
-layout:     work-layout
+layout:     main
 title:      "LocationInsight"
 subtitle:   "Dashboard"
 screenshots:
