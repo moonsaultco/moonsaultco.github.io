@@ -5,7 +5,6 @@ excerpt: 'Simplify your UX for better engagement, higher conversion rates, and h
 class: ux
 ---
 
-
 ## Simplify your UX for better engagement, improved conversion and happier customers.
 
 **Are your users as happy and productive as you want them to be?** Moonsault designs simple, focused and efficient UX for web and mobile apps. I work with small teams looking to **increase engagement** and **delight their customers**.
@@ -18,9 +17,7 @@ class: ux
 		<div class="name">Jason Kallas</div>
 	</div>
 	<div class="text">
-		John is a powerhouse Interaction Designer and industry expert. 
-		
-		<p>He is passionate, incredibly smart and has an innate sensitivity to what is and what is not useful. I love that fact that John is always engaged and fighting for what is practical and just. His designs are clean and on the money. He really is relentless in his quest to improve our products and pioneer great solutions. </p>
+		“John is a powerhouse Interaction Designer and industry expert. He is passionate, incredibly smart and has an innate sensitivity to what is and what is not useful. I love that fact that John is always engaged and fighting for what is practical and just. His designs are clean and on the money. He really is relentless in his quest to improve our products and pioneer great solutions.”
 	</div>
 	
 </div>
@@ -30,7 +27,7 @@ class: ux
 		<div class="name">Jake Gibbons</div>
 	</div>
 	<div class="text">
-		I've had the great pleasure of working on John's designs at Placeable for the past year. While anyone who looks at his work can clearly tell that he is a brilliant designer with great taste, it’s what you can’t tell without spending time with him that truly sets John apart. John brings a tremendous attitude, well thought out perspective, and an uncanny ability to both defend his position and remain flexible in the face of reasonable arguments.
+		“I've had the great pleasure of working on John's designs at Placeable for the past year. While anyone who looks at his work can clearly tell that he is a brilliant designer with great taste, it’s what you can’t tell without spending time with him that truly sets John apart. John brings a tremendous attitude, well thought out perspective, and an uncanny ability to both defend his position and remain flexible in the face of reasonable arguments.”
 	</div>
 </div>
 <div class="recommendation trevor">
@@ -39,7 +36,7 @@ class: ux
 		<div class="name">Trevor Alyn</div>
 	</div>
 	<div class="text">
-		John is one of those rare individuals who both knows what he’s doing and gives a damn about his job. He also happens to be a cool dude and fun to work with.
+		“John is one of those rare individuals who both knows what he’s doing and gives a damn about his job. He also happens to be a cool dude and fun to work with.”
 	</div>
 </div>
 

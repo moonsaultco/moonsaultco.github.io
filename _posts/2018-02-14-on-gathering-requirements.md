@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Problem with ‘Gathering Requirements’"
+longTitle:  false
 description: How requirements gathering can cause organizations to fail to do research.
 author: John Phillips
 categories: ux

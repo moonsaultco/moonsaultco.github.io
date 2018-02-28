@@ -7,21 +7,18 @@ pageName: blog-post
   <h1><a href="/blog/">Moonsault Blog</a></h1>
 </section>
 
-<section class="post" itemscope itemtype="http://schema.org/Article">
-  <div class="center block {% if page.headImage %}wide{% endif %}">
-    
+<section class="post" itemscope itemtype="http://schema.org/Article">    
     {% if page.headImage %}
-    <div class="head-image">
+    <div class="head-image ">
         {{ page.headImage | markdownify }}
     </div>
     {% endif %}
-    <h2 itemprop="name" class="{% if page.longTitle %}wrap{% endif %}">{{page.title}}</h2>
-    {% if page.subtitle %}<h3 class="subtitle">{{page.subtitle}}</h3>{% endif%}
-        
+  <div class="inside">
+    <h2 itemprop="name" class="title {% if page.longTitle %}long{% endif %}">{{page.title}}</h2>
     {% if page.author %}
-        {% if page.author == 'Chad Baudoin'%}{% assign email = "chad@moonsault.co" %}{% endif%}
-        {% if page.author == 'John Phillips'%}{% assign email = "john@moonsault.co" %}{% endif%}
-        {% if page.author == 'Travis Nelson'%}{% assign email = "travis@moonsault.co" %}{% endif%}  
+    {% if page.author == 'Chad Baudoin'%}{% assign email = "chad@moonsault.co" %}{% endif%}
+    {% if page.author == 'John Phillips'%}{% assign email = "john@moonsault.co" %}{% endif%}
+    {% if page.author == 'Travis Nelson'%}{% assign email = "travis@moonsault.co" %}{% endif%}  
     <p class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
       by
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -30,9 +27,9 @@ pageName: blog-post
       <span itemprop="datePublished" content="{{ page.date | date: "%F" }}" class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
     </p>
     {% endif%}
-    </div>
-  
-      <div itemprop="articleBody" class="post-content center block">
-      {{ content }}
-      </div>        
+    {% if page.subtitle %}<blockquote class="subtitle">{{page.subtitle}}</blockquote>{% endif%}
+  </div>  
+  <div itemprop="articleBody" class="post-content inside">
+  {{ content }}
+  </div>        
 </section>

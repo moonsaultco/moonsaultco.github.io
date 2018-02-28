@@ -7,3 +7,4 @@ Working with [Tendril][1], we were part of the team building their [MyHome][2]â„
 [2]: https://www.tendrilinc.com/solutions/solutions-for-utilities-and-retailers/my-home
 [3]: https://www.tendrilinc.com/solutions/solutions-for-utilities-and-retailers/orchestrated-energy
 [4]: http://ionicframework.com
+

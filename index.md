@@ -45,7 +45,7 @@ class: home
 						They’re creative, have a broad skill-set, and go above and beyond. Our project included a lot of experimentation. Moonsault was able to handle everything we threw at them.
 					</div>
 					<div class="source">
-						— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a>, <span class="mob-hide">Director of Digital Marketing at</span> SolarPulse
+						— <a href="https://www.linkedin.com/in/paulzalewski">Paul Zalewski</a>, <span class="mob-hide">Director at</span> SolarPulse
 					</div>
 				</div>
 			</div>
@@ -55,90 +55,73 @@ class: home
 
 
 <section id="work" class="work">
-	<div class="center block">
+	<div class="inside">
 		<h2>Our Work</h2>
-		<div class="subhead">Some recent projects</div>
+		<p>Some recent projects</p>
 
-		{% capture myhome_text %}
-		  {% include_relative content/myhome.md %}
-		{% endcapture %}
-		<div id="myhome"></div>
-		{{ myhome_text | markdownify }}
+{% comment %} ### For this markdown to be rendered w/o side effects, this section can't be indented ### {% endcomment %}
+<div id="myhome" markdown="1">
+	{% include_relative content/myhome.md %}
+</div>
+		
+<div class="img-wrap">
+	<a href="#" class="img-switch" data-id="myhome">
+		<img src="/img/myhome/a-explore.jpeg" data-count="0">
+	</a>
+	<p class="help-text">(click for more images)</p>
+</div>
 
-		<div class="img-wrap short">
-			<a href="#" class="img-switch" data-id="myhome">
-				<img src="/img/myhome/a-explore.jpeg" data-count="0">
-			</a>
-			<p class="center light">(click for more images)</p>
-		</div>
+<div id="pulse" markdown="1">
+	{% include_relative content/pulse.md %}
+</div>
 
+<div class="img-wrap">
+	<a href="#" class="img-switch" data-id="pulse">
+		<img src="/img/pulse/a-home.jpeg" data-count="0">
+	</a>
+	<p class="help-text">(click for more images)</p>
+</div>
 
-		{% capture pulse_text %}
-		  {% include_relative content/pulse.md %}
-		{% endcapture %}
-		<div id="pulse"></div>
-		{{ pulse_text | markdownify }}
+<div id="community-solar" markdown="1">
+	{% include_relative content/community.md %}
+</div>
 
-		<div class="img-wrap">
-			<a href="#" class="img-switch" data-id="pulse">
-				<img src="/img/pulse/a-home.jpeg" data-count="0">
-			</a>
-			<p class="center light">(click for more images)</p>
-		</div>
+<div class="img-wrap">
+	<a href="#" class="img-switch" data-id="comm">
+		<img src="/img/comm/a-home.jpeg" data-count="0">
+	</a>
+	<p class="help-text">(click for more images)</p>
+</div>
 
+<div id="revel" markdown="1">
+	{% include_relative content/revel.md %}
+</div>
 
-		{% capture comm_text %}
-		  {% include_relative content/community.md %}
-		{% endcapture %}
-		<div id="community-solar"></div>
-		{{ comm_text | markdownify }}
+<div class="img-wrap">
+	<a href="#" class="img-switch" data-id="revel">
+		<img src="/img/revel/c-details.png" data-count="0">
+	</a>
+	<p class="help-text">(click for more images)</p>
+</div>
 
-		<div class="img-wrap">
-			<a href="#" class="img-switch" data-id="comm">
-				<img src="/img/comm/a-home.jpeg" data-count="0">
-			</a>
-			<p class="center light">(click for more images)</p>
-		</div>
+<div id="physician" markdown="1">
+	{% include_relative content/hcp.md %}
+</div>
 
-
-		{% capture revel_text %}
-		  {% include_relative content/revel.md %}
-		{% endcapture %}
-		<div id="revel"></div>
-		{{ revel_text | markdownify }}
-
-		<div class="img-wrap">
-			<a href="#" class="img-switch" data-id="revel">
-				<img src="/img/revel/c-details.png" data-count="0">
-			</a>
-			<p class="center light">(click for more images)</p>
-		</div>
-
-
-		{% capture hcp_text %}
-		  {% include_relative content/hcp.md %}
-		{% endcapture %}
-		<div id="physician"></div>
-		{{ hcp_text | markdownify }}
-
-		<div class="img-wrap short">
-			<a href="#" class="img-switch" data-id="physician">
-				<img src="/img/physician/phys-loc-mob.jpg" data-count="0">
-			</a>
-			<p class="center light">(click for more images)</p>
-		</div>
+<div class="img-wrap">
+	<a href="#" class="img-switch" data-id="physician">
+		<img src="/img/physician/phys-loc-mob.jpg" data-count="0">
+	</a>
+	<p class="help-text">(click for more images)</p>
+</div>
 
 	</div>
 </section>
 
-
 <section id="contact">
-
-	<div class="center block">
+	<div class="inside">
 		<h2>Contact Us</h2>
-
 		Using the form below, or at <a href="mailto:hello@moonsault.co">hello@moonsault.co</a>
-
 		<form action="//flipmail.co/api/DkGV05xrfIT4MojED9Cy" method="post"> 
 			<label for="name">Your Name</label>
 			<input type="text" name="name"> 
@@ -156,7 +139,5 @@ class: home
 <script src="/js/cash.min.js"></script>
 
 <script>
-
   {% include index.js %}
-
 </script>
