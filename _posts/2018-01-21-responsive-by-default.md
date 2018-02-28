@@ -20,7 +20,7 @@ I’m gonna focus on flex layouts, rather than grid. I know grid is the new hotn
 
 ### A Working Example
 
-Have a look at this <a href="http://infomongo.com/responsive-flex-layout.html" target="_blank">sample page</a>. If the window is larger than 640 pixels wide, the picture and text are side by side. Smaller than that, and the picture is above the text. **All of this is done without any media queries**. *(If you are on a mobile device, rotate your phone into landscape to see the side-by-side layout.)*
+Have a look at this <a href="http://infomongo.com/posts/responsive-flex-layout.html" target="_blank">sample page</a>. If the window is larger than 640 pixels wide, the picture and text are side by side. Smaller than that, and the picture is above the text. **All of this is done without any media queries**. *(If you are on a mobile device, rotate your phone into landscape to see the side-by-side layout.)*
 
 
 <div class="wide center border" markdown="0">
@@ -85,7 +85,7 @@ Using flex-basis allows you to define a minimum width for the items. If there is
 
 You may have noticed that we set `flex-shrink` to `1`, which allows the items to shrink. We could have set it to 0, which would prevent them from shrinking. To see a difference, you have make the container narrower than 320 pixels. Allowing the items to shrink means that in a 300 pixel wide container, each flex item shrinks to 300 pixels wide. If they can’t shrink, then 320 pixels is the minimum size and in a narrower container the items would be clipped on their right edges.
 
-The <a href="http://infomongo.com/responsive-flex-layout.html" target="_blank">sample page</a> is also using flex box to achieve a sticky footer. It’s [adapted from this page][5].  View the source to see the CSS applied to the `<body>` and `<main>` elements,
+The <a href="http://infomongo.com/posts/responsive-flex-layout.html" target="_blank">sample page</a> is also using flex box to achieve a sticky footer. It’s [adapted from this page][5].  View the source to see the CSS applied to the `<body>` and `<main>` elements,
 
 [5]: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 
