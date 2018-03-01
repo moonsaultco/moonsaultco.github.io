@@ -41,7 +41,7 @@ p {
 	max-width: 40em;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
 	@extend .contrast-font;
 	margin: 1.3em 0 0;
 	color: $dark-text;
