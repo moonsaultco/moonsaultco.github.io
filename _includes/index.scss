@@ -481,25 +481,25 @@ header nav, .logo-box, .header h1 {
 }
 
 
-//ipad portrait and wider screens
-
+// ****** ipad portrait and wider screens ****************************
 @media (min-width: 768px) {	
 	h2 { 
-		font-size: percentage(32/22);
+		font-size: percentage(32/20);
 		//line-height: 1em;
 	}
 	h3 { 
-		font-size: percentage(28/22);
-		line-height: 36px;
+		font-size: percentage(28/20);
+		line-height: 32px;
 		
 	}
 	
 	section {
-		font-size: percentage(22/16);
-		//line-height: (36/22); rounds a bit off
-		line-height: 1.636363636363636;
+		padding: 2em;
+		font-size: percentage(20/16);
+		line-height: (32/20); //rounds a bit off
+		//line-height: 1.636363636363636;
 		pre {
-			font-size: percentage(18/22);
+			font-size: percentage(18/20);
 			line-height: 1.5;
 		}
 	}
@@ -566,8 +566,9 @@ header nav, .logo-box, .header h1 {
 	
 	
 	.columns {
-		max-width: $wider-max-width;
-		margin: 0 auto;
+		//max-width: $wider-max-width;
+		//max-width: 1200px;
+		margin: 0 5vw;
 		-webkit-column-width: 20em;
 		-moz-column-width: 20em;
 		column-width: 20em;
